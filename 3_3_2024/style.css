@@ -1,0 +1,42 @@
+body{
+    padding:0px;
+    margin:0px;
+    font-family: Arial;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.wrapper{
+    width: 1000px;
+    margin:auto;
+}
+.header{
+    background: url("image/category.jpg");
+    line-height: 19px;
+    color: red;
+    width: 100%;
+}
+.header .header-left{
+    float: left;
+    width: 50%;
+
+}
+.header .header-right{
+    width: 50%;
+    float : left;
+}
+.header .header-right ul{
+    padding : 0px;
+    margin: 0px;
+    list-style: none;
+    text-align: right;
+}
+.header .header-right ul li{
+    display: inline;
+}
+.header .header-right a{
+    color: red;
+    padding: 10px;
+}

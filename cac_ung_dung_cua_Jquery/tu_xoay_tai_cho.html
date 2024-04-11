@@ -1,0 +1,46 @@
+<!-- áp dụng cho chuông thông báo, ảnh sẽ tự động xoay tại chỗ một góc 60 độ lần 1 , 0 độ lần 2 , -60 độ lần 3 ,cứ như vậy nó sẽ tạo tảo a 1 vòng lặp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <style>
+    .thongbao{
+    position: position;
+    top: 50px;
+    left: 25px;
+    width: 200px;
+    height: 200px;
+    }
+    .thongbao img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+    </style>
+
+    <div class="thongbao">
+        <a href="#"><img src="image/chuong-thong-bao.jpg" id="thongbaone"></a>
+        </div>
+        <script>
+            $(document).ready(function(){
+                setInterval(function(){
+                    $("#thongbaone").animate({rotate: '-60deg'}, "fast");
+                    
+                }, 500);
+                setInterval(function(){
+                    $("#thongbaone").animate({rotate: '0deg'}, "fast");
+                    
+                }, 500);
+                setInterval(function(){
+                    $("#thongbaone").animate({rotate: '60deg'}, "fast");
+                    
+                }, 500);
+            });
+        </script>        
+</body>
+</html>

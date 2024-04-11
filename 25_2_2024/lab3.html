@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <img src="imge/a1.jpg" id="img-main">
+        <div id="box-img">
+            <ul>
+                <li><img src="imge/a1.jpg" id="img1" onclick="changeMap('img1');"></li>
+                <li><img src="imge/a2.jpg" id="img2" onclick="changeMap('img2');"></li>
+                <li><img src="imge/a3.jpg" id="img3" onclick="changeMap('img3');"></li>
+                <li><img src="imge/a4.jpg" id="img4" onclick="changeMap('img4');"></li>
+                <li><img src="imge/a5.jpg" id="img5" onclick="changeMap('img5');"></li>
+            </ul>
+        </div>
+    </div>
+    <style>
+        #box{
+            width: 500px; margin: auto;
+        }
+        #img-main{
+            width: 500px;
+        }
+        #box-img ul{
+            display: flex;
+            list-style-type: none;
+            margin-top: 5px;
+        }
+        #box-img ul li{
+            text-align: center; width: 20%;
+        }
+        #box-img img{
+            width: 80px;
+        }
+    </style>
+
+    <script>
+        function changeMap(img_id){
+// `           // lay value cua thuoc tinh src cua the html co id truyen vao
+            var srcImg = document.getElementById(img_id).getAttribute("src");
+            // tác động vào thẻ html có id = img-main, thay đổi giá trị của thuộc tính src
+         document.getElementById("img-main").setAttribute("src",srcImg);
+         // xoa thuoc tinh style
+         document.getElementById("img1").removeAttribute("style");
+         document.getElementById("img2").removeAttribute("style");
+         document.getElementById("img3").removeAttribute("style");
+         document.getElementById("img4").removeAttribute("style");
+         document.getElementById("img5").removeAttribute("style");
+            // xac lpa duong vien mau do
+            document.getElementById("img_id").setAttribute("style","border: 20px solid red");
+        }
+    </script>
+</body>
+</html>

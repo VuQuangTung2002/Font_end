@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <fieldset style="width: 500px; margin: auto;">
+        <legend>Hiệu ứng jquery</legend>
+        <div style="margin-bottom: 5px;">
+            <input type="button" id="hide1" value="hide1">
+            <input type="button" id="hide2" value="hide2">
+            <input type="button" id="hide3" value="hide3">
+            <input type="button" id="hide4" value="hide4">
+            <input type="button" id="show" value="show">
+            <input type="button" id="toggle" value="toogle">
+        </div>
+        <div style="margin-bottom: 5px;">
+            <input type="button" id="fadeOut" value="fadeOut">
+            <input type="button" id="fadeIn" value="fadeIn">
+            <input type="button" id="fadeToggle" value="fadeToggle">
+        </div>
+        <div style="margin-bottom: 5px;">
+            <input type="button" id="slideUp" value="slideUp">
+            <input type="button" id="slideDown" value="slideDown">
+            <input type="button" id="slideToggle" value="slideToggle">
+        </div>
+        <img src="images/a1.jpg" id="img-show" style="width: 500px;">
+    </fieldset>
+    <script>
+        $(document).ready(function(){
+            //hide với thời gian mặc định
+            $("#hide1").click(function(){
+                $("#img-show").hide();
+            });
+            //---
+            //hide với thời gian chỉ định
+            $("#hide2").click(function(){
+                $("#img-show").hide(1000);//chỉ định thời gian 1 giây = 1000 miligiay
+            });
+            //---
+            //hide với thời gian mặc định, sau đó gọi hàm để thực hiện tác vụ khác
+            $("#hide3").click(function(){
+                $("#img-show").hide(function(){
+                    alert("Thực hiện tác vụ khác");
+                });
+            });
+            //---
+            //hide với thời gian chỉ định, sau đó hiển thị hàm thực hiện tác vụ khác
+            $("#hide4").click(function(){
+                $("#img-show").hide(1000,function(){ 
+                    alert("ok"); 
+                });//chỉ định thời gian 1 giây = 1000 miligiay
+            });
+            //---
+            //hiển thị thẻ html, các tham số giống hàm hide
+            $("#show").click(function(){
+                $("#img-show").show();
+            });
+            //---
+            //---
+            //click một lần ẩn đi, click lần khác sẽ hiển thị lại thẻ html. Các tham số giống hàm hide
+            $("#toggle").click(function(){
+                $("#img-show").toggle();
+            });
+            //---
+            //thẻ html mờ dần rồi mất đi (fadeOut), tham số giống hàm hide
+            $("#fadeOut").click(function(){
+                $("#img-show").fadeOut();
+            });
+            //---
+            //thẻ html hiển thị dần (fadeIn), tham số giống hàm hide
+            $("#fadeIn").click(function(){
+                $("#img-show").fadeIn();
+            });
+            //---
+            //click 1 lần sẽ fadeOut, click lần khác sẽ fadeIn -> fadeToggle
+            $("#fadeToggle").click(function(){
+                $("#img-show").fadeToggle();
+            });
+            //---
+            //hiệu ứng slide
+            $("#slideUp").click(function(){
+                $("#img-show").slideUp();
+            });
+            //---
+            //hiệu ứng slide
+            $("#slideDown").click(function(){
+                $("#img-show").slideDown();
+            });
+            //---
+            //hiệu ứng slide
+            $("#slideToggle").click(function(){
+                $("#img-show").slideToggle();
+            });
+            //---
+        });
+    </script>
+</body>
+</html>

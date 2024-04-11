@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="time">
+    
+    </h1>
+    <script>
+        
+        // boi no thay doit eho tung giay nen no moi chay
+        setInterval(function(){
+            var thoi_gian = new Date();
+             // lay thong ti gio, phut , giay
+        var ngay = thoi_gian.getDate();
+        var hours = thoi_gian.getHours();
+        var minutes = thoi_gian.getMinutes();
+        var seconds = thoi_gian.getSeconds();
+
+        // lya thong tin ngay thang nam
+        var day = thoi_gian.getDate();
+        // voi moi dong get day thi sau 30 tang thang len 1
+        var month = thoi_gian.getMonth();
+        month ++;
+        var year = thoi_gian.getFullYear();
+        var ampm = hours<12 ? "AM":"PM";
+        var ngay_thang = day + "/" + month + "/" +year;
+        var srttime =ngay_thang+"--"+ hours +";"+ minutes+";" + seconds + ampm;
+        document.getElementById("time").innerHTML = srttime;
+        }, 1000);
+       
+    </script>
+</body>
+</html>

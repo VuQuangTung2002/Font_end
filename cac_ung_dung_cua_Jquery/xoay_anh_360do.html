@@ -1,0 +1,71 @@
+<!-- áp dụng cho việc xoay ảnh tại chỗ 360 độ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="anh-nen-thuong-hieu">
+        <ul>
+            <li><a href=""><img src="image/chuong-thong-bao.jpg" id="ao_nguc"></a></li>
+            <li><a href=""><img src="image/chuong-thong-bao.jpg" id="ao_du_tiec"></a></li>
+            <li><a href=""><img src="image/chuong-thong-bao.jpg" id="tui_xach"></a></li>
+            <li><a href=""><img src="image/chuong-thong-bao.jpg" id="giay_trang"></a></li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+
+            $("#ao_nguc").mouseover(function(){
+                var rotate =0;
+                var xoay = setInterval(function() {
+                    rotate+= 10;
+                $("#ao_nguc").css("transform", 'rotate('+rotate+'deg)');
+                if(rotate >= 360){
+                    clearInterval(xoay);
+                }
+            },10);
+
+            $("#ao_du_tiec").mouseover(function(){
+                var rotate2 =0;
+                var xoay2 = setInterval(function(){
+                    rotate2 += 10;
+                    $("#ao_du_tiec").css("transform",'rotate('+rotate2+'deg)');
+                    if(rotate2 >= 360){
+                        clearInterval(xoay2);
+                    }
+                }, 10);
+            });
+
+
+            $("#tui_xach").mouseover(function(){
+                var x3 =0;
+                var p = setInterval(function(){
+                    x3+= 10;
+                    $("#tui_xach").css("transform",'rotate('+x3+'deg)');
+                    if(x3>= 360){
+                        clearInterval(p);
+                    }                                
+                }, 10);
+            });
+
+            $("#giay_trang").mouseover(function(){
+                var x4 =0;
+                var p = setInterval(function(){
+                    x4 += 10;
+                    $("#giay_trang").css("transform",'rotate('+x4+'deg)');
+                    if(x4>= 360){
+                        clearInterval(p);
+                    }                                
+                }, 10);
+            });
+
+            });
+            
+        });
+    </script>
+</body>
+</html>

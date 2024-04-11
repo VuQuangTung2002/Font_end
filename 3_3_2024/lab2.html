@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1 xanh">box1</div>
+    <div class="box2 do">box2</div>
+    <div class="box3 tim">box3</div>
+    <div class="box4 vang">box4</div>
+    <style>
+        div{ 
+            width: 25%;
+            line-height: 100px;
+        }
+        .xanh{
+            background-color: green;
+        }
+        .do{
+            background-color: red;
+        }
+        .tim{
+            background-color: purple;
+        }
+        .vang{
+            background-color: yellow;
+        }
+        .box1, .box2, .box3, .box4
+        {
+            float : left;
+        }
+        @media screen and (max-width: 1200px){
+        .xanh{
+                width: 100%;
+        }
+        .do, .tim, .vang{
+            width: 33.3333333%;
+        }
+        /* co man hinh 768px , 2 khoi tren , 2 khoi duoi*/
+        @media all and (max-width: 576px){
+            .do,.tim,.vang,.xanh{
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="loading">
+    </h1>
+    <style>
+        #loading{
+            height: 50px;
+            background-color: green;
+        }
+    </style>
+    <script>
+        var n=0;
+        var id = setInterval(function(){
+            n++;
+            var widthloading = "width: "+n+"px;";
+            // tac dong vao id = loading , thay doi thuoc tinh style
+            document.getElementById("loading").setAttribute("style",widthloading);
+            if(n== 500){
+                clearInterval(id);
+            }
+        }, 100);
+    </script>
+</body>
+</html>

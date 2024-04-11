@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <fieldset style="margin: 10px auto; width: 100px; height: 80px;" id="f">
+        <legend>Cộng 2 số</legend>
+        <table>
+            <tr>
+                <td>Số 1</td>
+                <td><input type="number" id="so1"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="thuchien" value="Thực hiện"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><h1 id="show"></h1></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+       $(document).ready(function(){
+        $("#thuchien").click(function(){
+            var x = $("#so1").val();
+        if(x == ""){
+            $("#so1").attr("style","border: 1px solid red");
+
+        }
+        else{
+            $("#so1").removeAttr("style");
+            $("#show").text(x);
+            $("#f").attr("style","height: 200px; width: 100px; margin: 10px auto");
+        }
+        });
+       });
+    </script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="responsive.css">
+
+    <title>mysapo.net</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<bod>
+   
+     <!-- /thẻ messenger -->
+    <!-- / các thẻ đứng im -->
+    <!-- bao quanh nen-->
+    <div class="wrapper">
+        <!-- header -->
+        <div class="container-fluid header">
+        <!-- header top -->
+            <div class="container header-top align-items-center">
+                <div class="row"> <!-- Thêm class align-items-center để căn giữa theo chiều dọc -->
+                    <div class="col-md-6 col-lg-6 header-top-left align-items-center">
+                        <div class="row">
+                        <div class="col-md-6 col-lg-6" style="display: flex;">
+                            <img src="image/hotline.jpg">
+                            <a href="#">190000010</a>
+                        </div>
+                        <div class="col-md-5 col-lg-5" style="display: flex;">
+                            <img src="image/email.jpg"> <!-- Giảm khoảng cách giữa ảnh và text -->
+                            <a href="#">vutung1234567890@gmail.com</a>
+                        </div>
+                        <div class="col-md-1 col-lg-1 trangtrang">
+
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 header-top-right align-items-center" style="padding-left: 20px;">
+                        <ul class="row"> <!-- Thêm class d-flex và justify-content-end để căn phải -->
+                            <li class="col-md-4 col-lg-4"><span class="timkiem"><input type="text"  placeholder="Tìm Kiếm Sản Phẩm ..."></span></li>
+                            <li class="col-md-4 col-lg-4 ModeTaiKhoan">
+                                <img src="image/mode-taikhoan.jpg" id="TaiKhoan" alt="tai khoan" style="line-height: 20px;">
+                                <ul class="menu2">
+                                    <li><a href="#">Đăng Nhập</a></li>
+                                    <li><a href="#">Đăng Kí</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-lg-4"><img src="image/mode-giohang.jpg" alt="khong co san pham nao"></li>
+                        </ul>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#TaiKhoan").click(function(){
+                                $(".menu2").fadeToggle(function(){
+                                    $(".menu2").css("visibility","visible");
+                                });
+                            })
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-- /header top -->
+        <!-- header menu -->
+        <div class="container-fluid header-menu align-items-center">
+            <div class="row">
+            <div class="col-xm-2 col-md-2 col-xl-2 anhdaidien">
+                <img src="image/anh-dai-dien.jpg"  alt="anh dai dien" style="border-radius: 10px;width: 200px;height: 100px;">
+            </div>
+            <script>
+                $(document).ready(function(){ 
+                    var slide = new Array();
+                    slide[0] = "image/thoi-trang-cong-so.jpg";
+                    slide[1] = "image/thoi-trang-dao-pho.jpg";
+                    slide[2] = "image/thoi-trang-dao-tiec.jpg";
+                    slide[3] = "image/trang-chu.webp";
+                    var n=-1;
+                    setInterval(function(){
+                        n++;
+                        $("#anhdaidienne").fadeOut(function(){
+                        $("#anhdaidienne").attr("src",slide[n]);
+                        $("#anhdaidienne").fadeIn();
+                        if(n== slide.length-1){
+                            n=-1;
+                        }
+                    });
+                    }, 2000);
+                   
+                });
+            </script>
+            <div class="col-md-2 col-xl-2"></div>
+            <div class="col-md-8 col-xl-8 menuchinh">
+                <ul>
+                    <li><a href="file:///D:/chuyen_tu_o_c/xamm3/htdocs/khoa_fontend_react/font_end_html/BTL/main.html">Trang Chủ</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="file:///D:/chuyen_tu_o_c/xamm3/htdocs/khoa_fontend_react/font_end_html/BTL/product.html">Sản Phẩm</a> <img src="image/mui-ten-chi-xuong.jpg">
+                    <ul class="sanpham-bac2">
+                        <li><a href="">Sản Phẩm Mới</a>
+                            <ul class="sanpham-bac3">
+                                <li><a href="#">Thời Trang Nam</a></li>
+                                <li><a href="#">Thời Trang Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Sản Phẩm Khuyến Mại</a></li>
+                        <li><a href="">Sản Phẩm Nổi Bật</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <!-- /header menu -->
+        <!-- header anh -->
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-12 col-xl-12 header-anh">
+
+            <img src="image/trang-chu.webp" id="anhdaidienne" style="height: 100%;width: 100%;">
+            <div class="nutchuyen1"></div>
+            <div class="nutchuyen2"></div>
+        </div>
+        </div>
+        </div>
+        <!--/header anh-->
+        <!-- header cac hang thoi trang -->
+        <div class="container-fluid header-hang-thoi-trang" style="margin-top: 50px;margin-left: -50px;">
+            <div class="row">
+                <div class="col-md-1 col-xl-1"></div>
+                <div class="col-md-3 col-xl-3 x1"></div>
+                <div class="col-md-1 col-xl-1"></div>
+                <div class="col-md-3 col-xl-3 x2"></div>
+                <div class="col-md-1 col-xl-1"></div>
+                <div class="col-md-3 col-xl-3 x3"></div>
+            </div>
+        </div>
+        </div>
+
+        <!-- /header cac hang thoi trang -->
+        </div>
+        <!-- /header -->
+        <!-- san pham moi -->
+        <div class="container-fluid san-pham-moi">
+                <div class="row">
+                <div class="col-xl-12 col-md-12 tieu-de-san-pham-moi">
+                <a href="#">Sản Phẩm Mới</a>
+                </div>
+            </div>
+        </div>
+            <div class="container-fluid cac-san-pham">
+                <ul class="row">
+                    <li class="col-md-3 col-xl-3"><a href="file:///D:/chuyen_tu_o_c/xamm3/htdocs/khoa_fontend_react/font_end_html/BTL/chitietsanpham.html">
+                        <img src="image/dam-thoi-trang-cao-cap.jpg">
+                    </a>
+                    <span><p href="file:///D:/chuyen_tu_o_c/xamm3/htdocs/khoa_fontend_react/font_end_html/BTL/chitietsanpham.html">Đầm Công Sở Cao Cấp</p></span>
+                    <nav href="#">280.000 đ</nav>
+                    </li>
+                    <li class="col-md-3 col-xl-3"><a href="#"><img src="image/ao-tay-loe.jpg"></a>
+                        <span><p href="#">Áo Tay Loe</p></span>
+                        <nav href="#">450.000 đ</nav>
+                    </li>
+                    <li class="col-md-3 col-xl-3"><a href="#"><img src="image/dam-suong-no-ruy-bang.jpg"></a>
+                        <span style=""><p href="#">Đầm suông nơ ruy băng</p></span>
+                        <nav href="#">540.000 đ</nav>
+                    </li>
+                    <li class="col-md-3 col-xl-3"><a href="#"><img src="image/dam-cong-so-cao-cap.jpg"></a>
+                        <span><p href="#">Đầm Công Sở Cao Cấp</p></span>
+                        <nav href="#">500.000 đ</nav>
+                    </li>
+                </ul>
+                </div>
+            <div class="container-fluid mau-quang-cao-san-pham">
+                <ul class="row">
+                    <li class="col-lg-1"></li>
+                    <li class="col-md-12 col-lg-5"><a href="" style="padding-left: -100px;"><img alt="werwe" src="image/dam-xoe-xinh-san.jpg" ></a></li>
+                    <li class="col-lg-1"></li>
+                    <li class="col-md-12 col-lg-5"><a href="" style="padding-left: 0px;"><img alt="fewrwer"  src="image/bien-thoi-trang-vay-dam.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /san pham moi -->
+        <!-- san pham noi bat -->
+        <div class="san-pham-moi-noi-bat">
+
+            <div class="tieu-de-san-pham-noi-bat">
+                <a href="#">Sản Phẩm Nổi Bật</a>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $("#mang_mong").mouseover(function(){
+                        $("#mang_mong").attr("style", "width:500px; height:500px");
+                    });
+                    $("#mang_mong").mouseout(function(){
+                        $("#mang_mong").attr("style", "width:346px; height:346px");
+                    });
+                });
+                $(document).ready(function(){
+                    $(".cac-san-pham li").hover(function(){
+                        // tang kich thuoc cua anh len 1.2
+                        $(this).find("img").css("transform","scale(1.2)");
+                    },function(){
+                      $(this).find("img").css("transform","scale(1)");  
+                    });
+                });
+                $(document).ready(function() {
+                $('.cac-san-pham-noi-bat li').hover(function() {
+                    // tim thuoc tinh img de tang thuoc tinh len 1.2
+                $(this).find('img').css('transform', 'scale(1.2)');
+                }, function() {
+                // Loại bỏ lớp overlay khi di chuột ra
+                // Khôi phục kích thước ảnh về bình thường
+                $(this).find('img').css('transform', 'scale(1)');
+                });
+                });
+            </script>
+            <div class="container-fluid cac-san-pham-noi-bat">
+                <ul class="row">
+                    <li class="col-md-3 col-xl-3"><a href="#"><img src="image/dam-thoi-trang-cao-cap.jpg"></a>
+                    <span><p href="#">Đầm Công Sở Cao Cấp</p></span>
+                    <nav href="#">280.000 <sup>đ</sup></nav>
+                    </li>
+                    <li  class="col-md-3 col-xl-3"><a href="#"><img src="image/vay-oli-nu.jpg"></a>
+                    <span><p href="#">Váy Midi Caro Vạt Lệch</p></span>
+                    <nav href="#">749.000 <sup>đ</sup></nav>
+                    </li>
+                    <li  class="col-md-3 col-xl-3"><a href="#"><img src="image/dam-cong-so-cao-cap-mau-xanh.jpg"> </a>
+                        <span><p href="#">Đầm công sở cao cấp màu xanh</p></span>
+                        <nav href="#">400.000 <sup>đ</sup></nav>
+                    </li>
+                    <li  class="col-md-3 col-xl-3"><a href="#"><img src="image/dam-cong-so-cao-cap.jpg"></a>
+                        <span><p href="#">Đầm Công Sở Cao Cấp</p></span>
+                        <nav href="#">500.000 <sup>đ</sup></nav>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /san pham noi bat -->
+        <!-- các nhãn  hàng nổi tiếng hợp tác -->
+        <div class="container-fluid nen-cac-nhan-hang ">
+            <!-- nen ben trai -->
+            <div class="row">
+            <div class="col-md-1 col-xl-1"></div>
+            <div class="col-md-8 col-xl-8 nen-cac-nhan-hang-left">
+                <!-- cac cau chu gioi thieu thuong hieu -->
+                <div class="chu-thuong-hieu">
+                    <nav>VỀ CHÚNG TÔI</nav>
+                    <div>“ Vượt qua khoảng cách với phong cách của riêng của mình.”</div>
+                </div>
+                <!-- /cac cau chu gioi thieu thuong hieu -->
+                <!-- cac hinh anh san pham -->
+                <div class="conatiner anh-nen-thuong-hieu">
+                    <ul class="row">
+                        <li class="col-xl-2 col-md-2"><a href=""><img src="image/ao-nguc.jpg" id="ao_nguc"></a></li>
+                        <li class="col-xl-1 col-md-1"></li>
+                        <li class="col-xl-2 col-md-2"><a href=""><img src="image/ao-da-tiec.jpg" id="ao_du_tiec"></a></li>
+                        <li class="col-xl-1 col-md-1"></li>
+                        <li class="col-xl-2 col-md-2"><a href=""><img src="image/tui-xach.jpg" id="tui_xach"></a></li>
+                        <li class="col-xl-1 col-md-1"></li>
+                        <li class="col-xl-2 col-md-2"><a href=""><img src="image/giay-trang.jpg" id="giay_trang"></a></li>
+                    </ul>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        var ds = new Array();
+                        ds[0] = "image/ao-nguc.jpg";
+                        ds[1] = "image/ao-da-tiec.jpg";
+                        ds[2] = "image/tui-xach.jpg";
+                        ds[3] = "image/giay-trang.jpg";
+
+                        $("#ao_nguc").mouseover(function(){
+                            var rotate =0;
+                            var xoay = setInterval(function() {
+                                rotate+= 10;
+                            $("#ao_nguc").css("transform", 'rotate('+rotate+'deg)');
+                            if(rotate >= 360){
+                                clearInterval(xoay);
+                            }
+                        },10);
+
+                        $("#ao_du_tiec").mouseover(function(){
+                            var rotate2 =0;
+                            var xoay2 = setInterval(function(){
+                                rotate2 += 10;
+                                $("#ao_du_tiec").css("transform",'rotate('+rotate2+'deg)');
+                                if(rotate2 >= 360){
+                                    clearInterval(xoay2);
+                                }
+                            }, 10);
+                        });
+
+
+                        $("#tui_xach").mouseover(function(){
+                            var x3 =0;
+                            var p = setInterval(function(){
+                                x3+= 10;
+                                $("#tui_xach").css("transform",'rotate('+x3+'deg)');
+                                if(x3>= 360){
+                                    clearInterval(p);
+                                }                                
+                            }, 10);
+                        });
+
+                        $("#giay_trang").mouseover(function(){
+                            var x4 =0;
+                            var p = setInterval(function(){
+                                x4 += 10;
+                                $("#giay_trang").css("transform",'rotate('+x4+'deg)');
+                                if(x4>= 360){
+                                    clearInterval(p);
+                                }                                
+                            }, 10);
+                        });
+
+                        });
+                        
+                    });
+                </script>
+                <!-- /cac hinh anh san pham -->
+            </div>
+            <!-- /nen ben trai -->
+            <!-- anh nen ben phai -->
+
+            <div class="col-md-3 col-xl-3 nen-cac-nhan-hang-right">
+                <img src="image/anh-nguoi-mau-nhan-hang.jpg">
+            </div>
+        </div>
+            <!-- /anh nen ben phai -->
+        </div>
+        <!-- anh cac nhan hieu -->
+        <div class="container-fluid anh-cac-nhan-hieu" style="margin: 20px;">
+            <ul class="row">
+                <li class="col-md-1 col-xl-1"><a href=""><img src="image/fashion-look.jpg" alt="fashion-look"></a></li>
+                <li class="col-md-1 col-xl-1"></li>
+                <li class="col-md-1 col-xl-1"><a href=""><img src="image/gent-mart.jpg" alt="gent mart"></a></li>
+                <li class="col-md-1 col-xl-1"></li>
+                <li class="col-md-1 col-xl-1"><a href=""><img src="image/junshine.jpg" alt="junshine"></a></li>
+                <li class="col-md-1 col-xl-1"></li>
+                <li class="col-md-1 col-xl-1"><a href=""><img src="image/venisa.jpg" alt="venisa"></a></li>
+                <li class="col-md-1 col-xl-1"></li>
+                <li class="col-md-1 col-xl-1"><a href=""><img src="image/libel.jpg" alt="libel"></a></li>
+                <li class="col-md-1 col-xl-1"></li>
+                <li class="col-md-1 col-xl-1"><a href=""><img src="image/fashion-look.jpg" alt="fashion-look"></a></li>
+            </ul>
+        </div>
+        <!-- /anh cac nhan hieu -->
+        <!-- / các nhãn hàng nổi tiếng hợp tác -->
+
+        <!-- Tin tức Mới nhất -->
+        <div class="tin-tuc-moi-nhat">
+            <!-- tieu de tin tuc moi nhat -->
+            <div class="tieu-de-tin-tuc">
+                <a href="#">Tin Tức Mới Nhất</a>
+            </div>
+            <!-- /tieu de tin tuc moi nhat -->
+            <!-- cac loai tin tuc -->
+            <div class="container cac-loai-tin-tuc">
+                <ul class="row">
+                    <li class="col-md-4 col-xl-4 tintuc">
+                        <div class="hinhanh-tin-tuc">
+                            <img src="image/3mon-qua-y-nghia.jpg" style="width: 100%;height: 100%;">
+                        </div>
+                        <div class="noidung-tintuc">
+                            <a href="#">3 món quà Giáng sinh ý nghĩa trong mùa Noel</a>
+                        </div>
+                        <div class="thongtin_tintuc">
+                            <img src="image/mode-thoi-gian.jpg">
+                            <a>31-1-2024</a>
+                            <img src="image/tai-khoan.jpg">
+                            <a>Vũ Quang Tùng</a>
+                        </div>
+                        <pre>
+Mang ý nghĩa của niềm hy vọng và sức sống mới, cây thông Noel là món quà được nhiều người lựa chọn nhất để tặng nhau mỗi khi dịp Giáng sinh về. Tuy nhiên, nếu bạn muốn món quà của mình thật độc đáo cũng như không “đụng hàng”, thay vì tặng một cây thông Noel bằng lá Tùng như mọi khi, bạn có thể sáng tạo bằng nhiều loại hoa khác nhưng vẫn tạo kiểu theo hình dáng cây thông. Những thiết kế như vậy không chỉ độc đáo và mới lạ mà còn rất tiện dụng khi có thể trang trí được ở nhiều vị trí trong nhà cũng như phù hợp với mọi đối tượng: bạn bè, đồng nghiệp hay người thân.
+Truyền thuyết kể rằng thánh Maria và Giu-se trong đêm Chúa Giáng sinh đã,tìm ra nơi trú ngụ nhờ lần theo ánh sáng của ngọn nến hắt ra từ cửa nhỏ của một cái chuồng bò lừa. Chính vì thế, ngọn nến tượng trưng cho niềm hi vọng, tình yêu và niềm vui, soi sáng dẫn đường cho mọi người bước qua những ngày u tối.
+Thế nhưng bạn nghĩ rằng tặng một ngọn nến là chuyện thật không tưởng? Với chậu hoa Ngọn nến lung linh được kết hợp từ Phong lộc hoa, cúc pico và lá nguyệt quế, bạn sẽ phải thay đổi suy nghĩ ngay đấy. Như ngọn nến được thắp lên huyền ảo giữa những bài thánh ca du dương yên bình, Phong lộc hoa nổi bật giữa những bông hoa Cúc pico nhỏ nhắn, gửi gắm bao yêu thương và hy vọng chào đón một mùa Giáng sinh đầy hồng ân. Hơn thế, hoa còn có màu sắc rực rỡ và mang đến cho gia chủ sự may mắn, tài lộc, niềm vui nên rất phù hợp để tô điểm không gian sống thêm sinh động.    
+Nổi tiếng với hai màu lá xanh đỏ rực rỡ, một trong những biểu tượng của ngày Giáng sinh, những chậu Trạng nguyên xinh xắn là món quà tuyệt vời để bạn trao tặng đến bất cứ ai. Hơn thế, đây còn là loại hoa có độ bền cao, dễ chăm sóc và kết hợp cùng các phụ liệu khác nên có thể trang trí ở nhiều không gian khác nhau trong gia đình. Tặng bạn bè, người thân hay đồng nghiệp một Khu vườn Giáng sinh với những chậu Trạng nguyên kết hợp cùng các loại hoa thật đa dạng, họ sẽ phải gật gù hài lòng với món quà Giáng sinh đặc biệt này đấy. Và đừng quên kèm theo đó là những lời nhắn gửi yêu thương từ trái tim để mang đến cho người nhận một mùa Giáng sinh ấm áp bạn nhé!
+                        </pre>
+                        <div class="xem-chi-tiet">
+                            <a href="#"><img src="image/xem-chi-tiet.jpg"></a>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-4 col-xl-4 tintuc">
+                        <div class="hinhanh-tin-tuc">
+                            <img src="image/hoa-hong.jpg" style="width: 100%;height: 100%;">
+                        </div>
+                        <div class="noidung-tintuc">
+                            <a href="#">Ý nghĩa hoa hồng trong ngày kỷ niệm, ngày lễ tình nhân</a>
+                        </div>
+                        <div class="thongtin_tintuc">
+                            <img src="image/mode-thoi-gian.jpg">
+                            <a>31-1-2024</a>
+                            <img src="image/tai-khoan.jpg">
+                            <a>Vũ Quang Tùng</a>
+                        </div>
+                        <pre>
+Mỗi màu sắc hoa hồng lại mang đến một ý nghĩa biểu đạt khác nhau, vì vậy bạn hãy cùng Hoayeuthuong.com tìm hiểu xem bó hoa mình tặng mang thông điệp gì nhé:
+Hoa hồng đỏ: tượng trưng cho một tình yêu nồng cháy và lãng mạn. Hoa hồng đỏ đã có từ rất lâu đời, trải qua nhiều nền văn hóa - cả phương tây và phương đông.Nhưng ở bất kì đâu, nó cũng luôn là loài hoa được yêu thích nhất, và biểu tượng cho một thứ tình cảm vô cùng thiêng liêng: Tình yêu.
+Hoa hồng trắng: tượng trưng cho sự ngây thơ, duyên dáng và sự cảm thông. Hồng trắng không chỉ biểu tượng cho một tình yêu thuần khiết, cao thượng mà mặt khác, nó còn là loài hoa dành để bày tỏ lời xin lỗi đến người yêu nếu chẳng may bạn có mắc lỗi lầm.
+Hoa hồng vàng: Có lẽ đây là loài hoa làm người nhận khá đau đầu bởi ý nghĩa khá đa dạng của nó: Hoa hồng vàng không chỉ tượng trưng cho một tình yêu kiêu sa đầy rực rỡ, mà nó còn là loài hoa của tình bạn, thể hiện sự quan tâm và tiến triển trong mối quan hệ, chẳng hạn như: "anh quan tâm đến em" hoặc "hãy nhớ đến anh". Tặng một bó hồng vàng có thể là mừng ngày khởi đầu, và cả mừng ngày trở về. Đôi khi,hồng vàng lại là một lời bày tỏ sự ghen tuông, tình yêu giảm sút, và sự phản bội. Bên cạnh đó, hoa hồng vàng cũng là loài hoa lý tưởng để dành tặng mẹ và bà, bởi lẽ nó còn có ý nghĩa của sự biết ơn và tôn kính.
+Hoa hồng phớt: Màu hồng phớt nhẹ nhàng của hoa hồng ngụ ý về sự bắt đầu của một tình yêu đầy mơ mộng, lãng mạn và dịu dàng. Bên cạnh đó, nó còn thể hiện một hạnh phúc tròn đầy với lời nhắn nhủ: "Hãy tin anh nhé! "
+                        </pre>
+                        <div class="xem-chi-tiet">
+                            <a href="#"><img src="image/xem-chi-tiet.jpg"></a>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-4 col-xl-4 tintuc">
+                        <div class="hinhanh-tin-tuc">
+                            <img src="image/noel.jpg" style="width: 100%;height: 100%;">
+                        </div>
+                        <div class="noidung-tintuc">
+                            <a href="#">Nên tặng quà giáng sinh gì cho bạn gái mới quen?`</a>
+                        </div>
+                        <div class="thongtin_tintuc">
+                            <img src="image/mode-thoi-gian.jpg">
+                            <a>31-1-2024</a>
+                            <img src="image/tai-khoan.jpg">
+                            <a>Vũ Quang Tùng</a>
+                        </div>
+                        <pre>
+Không khí giáng sinh đang ùa về khắp mọi nẻo đường, ai ai cũng nô nức chờ đón và chuẩn bị những món quà đặc biệt gửi đến người mình yêu thương. Đây cũng là dịp mà các chàng trai có thể dành tặng cho người yêu của mình những món quà giáng sinh ý nghĩa, đặc biệt là với những tình yêu đang chớm nở.
+Dưới đây sẽ là một vài gợi ý quà tặng giáng sinh cho bạn gái mới quen thật ý nghĩa và lãng mạn, giúp các chàng thể hiện được tình cảm của mình đối với cô gái:
+"Anh muốn chú gấu này sẽ thay cho vòng tay ấm áp của em ở bên anh những lúc anh vắng mặt" – Đó là những lời nói chàng có thể dành cho nàng khi gửi tặng cô ấy một chú gấu bông thật to và dễ thương. Phụ nữ rất thích đồ bông, và sẽ rất tuyệt vời khi tặng cô ấy một con cún bông to gần bằng người nàng cùng với câu chúc lãng mạn và ngọt ngào như thế.                            
+Con trai có thể không cần phải mua quà to, quà “xịn” cho bạn gái nhưng vẫn khiến cô nàng cười tủm tỉm cả ngày. Chỉ cần một tấm thiệp nho nhỏ, xinh xinh kèm theo những lời chúc được các cậu tẩn mẩn viết tay sẽ làm nửa kia cảm thấy mình được trân trọng trong mối quan hệ này của hai người. Bởi đơn giản, không phải chàng trai nào cũng kiên nhẫn và để tâm đến những tiểu tiết nhỏ như việc ngồi cẩn thận viết tay từng lời chúc dành tặng người mình yêu thương đâu nhé!
+Nước hoa là niềm đam mê của mọi phụ nữ, bởi cô gái nào cũng mong muốn khoác lên mình thứ hương thơm quyến rũ. Và nếu chàng muốn tỏ ra là chàng trai ân cần, chu đáo, hãy tặng nàng một loại nước hoa mới nhất, hương thơm đáng yêu nhất. Mùi hương ấy rồi sẽ nhắc chính chàng nhớ tới sự quyến rũ của nàng.
+Ý tưởng tặng một bữa ăn trưa thật là tuyệt. Chàng trai có thể đặt một bàn tại một nhà hàng hay chỉ đơn giản là mời bạn gái của mình đi ăn một bữa ấm áp ở quán quen, hoặc đơn giản mua tặng cho nàng những chiếc bánh giáng sinh đáng yêu nếu không có nhiều thời gian bên nhau. Chắc chắn món quà này sẽ giúp hai người trở nên thân thiết hơn.                            
+                        </pre>
+                        <div class="xem-chi-tiet">
+                            <a href="#"><img src="image/xem-chi-tiet.jpg"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /cac loai tin tuc -->
+        </div>
+        <!-- /Tin Tức Mới Nhất -->
+        <!-- Footer -->
+        <div class="container footer">
+            <!-- footer o trai -->
+            <div class="row">
+            <div class="col-xl-4 col-md-4 footer-o-trai">
+                <div class="row">
+                <img class="col-xl-12 col-md-12" src="image/logo.jpg" style="width: 100%;height: 100%;">
+                </div>
+            <div class="col-xl-12 col-md-12 diachi">
+                <div class="row">
+                    <li class="col-xl-12 col-md-12"><img src="image/vi-tri.jpg"><a style="font-size: 14px;"> Ladeco Building, 266 Doi Can Street, Ba Dinh District, Ha Noi</a></li>
+                </div>
+                <div class="row">
+                    <li class="col-xl-12 col-md-12"><img src="image/dien-thoai.jpg"><a href="#" style="font-size: 14px;text-decoration: none;color: black;">19006750</a></li>
+                </div>
+                <div class="row">
+                    <li class="col-xl-12 col-md-12"><img src="image/email2.jpg"><a href="" style="font-size: 14px;text-decoration: none;color: black;">vutung1234567890@gmail.com</a></li>
+                </div>
+            </div>
+                </div>
+            
+            <!-- /footer o trai -->
+            <!-- footer o giua -->
+            <div class="col-xl-4 col-md-4 footer-o-giua">
+                <div class="row">
+                <div class="col-xl-6 col-md-6 footer-o-giua-1">
+                    <span>Về Chúng Tôi</span>
+                    <ul>
+                        <li><a href="">Trang Chủ</a></li>
+                        <li><a href="">Giới Thiệu</a></li>
+                        <li><a href="">Sản Phẩm</a></li>
+                        <li><a href="">Tin Tức</a></li>
+                        <li><a href="">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-6 col-md-6 footer-o-giua-2">
+                    <span>Chính Sách</span>
+                    <ul>
+                        <li><a href="">Trang Chủ</a></li>
+                        <li><a href="">Giới Thiệu</a></li>
+                        <li><a href="">Sản Phẩm</a></li>
+                        <li><a href="">Tin Tức</a></li>
+                        <li><a href="">Liên Hệ</a></li>
+                    </ul>
+                   
+                </div>
+               
+            </div>
+            </div>
+            <!-- /footer o giua -->
+            <!-- footer o phai -->
+            <div class="col-xl-4 col-md-4 footer-o-phai">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 dangki">
+                    <span>Đăng Kí Nhận Khuyến Mại</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 text">
+                    <input type="text" placeholder="Nhập Email Của Bạn ...">
+                    <img src="image/phieu-gui.jpg" style="width: 25%;height: 40%;">
+                    </div>
+                </div>
+                <div class="nentang">
+                    <ul class="row">
+                        <li class="col-xl-3 col-md-3"><a href=""><img src="image/facebook.jpg" alt="FaceBook.com"></a></li>
+                        <li class="col-xl-3 col-md-3"><a href=""><img src="image/twitter.jpg" alt="Twitter.com"></a></li>
+                        <li class="col-xl-3 col-md-3"><a href=""><img src="image/instagram.jpg" alt="Íntagram.com"></a></li>
+                        <li class="col-xl-3 col-md-3"><a href=""><img src="image/in.jpg" alt="In.com"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /footer o phai -->
+            <!-- dong cuoi de chot bai -->
+           
+            <!-- /dong cuoi de chot bai -->
+        </div>
+    </div>
+        <!-- /Footer -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-md-3"></div>
+            <div class="col-xl-6 col-md-6 dongcuoi">
+                <span>Bản quyền thuộc về <b>HaluFashion </b> | Cung cấp bởi <b>Vũ Quang Tùng</b></span>
+            </div>
+            <div class="col-xl-3 col-md-3"></div>
+        </div>
+    </div>
+         <!-- các thẻ đứng im  -->
+    <!-- thông báo -->
+    <div class="thongbao1">
+        <p><a style="font-size: 30px;">Tích Hợp Sẵn Các Ứng Dụng</a><a id="thoat" style="font-size: 40px;margin-left: 30px;margin-top: 0px;">X</a></p>
+        <ul>
+                <li><a href=""> >>> Đánh Giá Sản Phẩm</a></li>
+                <li><a href=""> >>> Mua X Tặng Y</a></li>
+                <li><a href=""> >>> Ứng Dụng Afiliate</a></li>   
+                <li><a href=""> >>> Đa Ngôn Ngữ</a></li>
+                <li><a href=""> >>> Livechat Facebook</a></li>
+        </ul>
+        <p style="color: aliceblue;font-size: 22px;">Lưu ý với các ứng dụng trả phí bạn cần cài đặt và mua ứng dụng này trên App store Sapo để sử dụng ngay</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#thoat").click(function(){
+                $(".thongbao1").fadeOut(1000);
+            });
+            $(".thongbao").click(function(){
+                $(".thongbao1").fadeToggle(1000);
+            });
+
+            
+        });
+    </script>
+    <div class="thongbao">
+        <a><img src="image/chuong-thong-bao.jpg" id="thongbaone"></a>
+    </div>
+    <script>
+            $(document).ready(function(){
+                    setInterval(function(){
+                    $("#thongbaone").animate({rotate: '-60deg'}, "fast");
+                    
+                }, 500);
+                setInterval(function(){
+                    $("#thongbaone").animate({rotate: '0deg'}, "fast");
+                    
+                }, 500);
+                setInterval(function(){
+                    $("#thongbaone").animate({rotate: '60deg'}, "fast");
+                    
+                }, 500);
+            });
+    </script>
+    <!-- /thông báo -->
+    <!-- thẻ lên trang đầu -->
+    <div class="len-trang-dau">
+        <a href="#"><img src="image/nut-lendau.jpg"></a>
+    </div>
+     <!-- /thẻ lên trang đầu -->
+     <!-- thẻ messenger -->
+     <div class="messenger">
+        <a href=""><img src="image/messenger.jpg"></a>
+    </div>
+    </div>
+    <!-- /bao quanh nen -->
+</body>
+</html>

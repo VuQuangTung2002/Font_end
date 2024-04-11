@@ -1,0 +1,13 @@
+@media screen and(max-width: 1000px){
+    .wrapper{
+        width: 100%;
+    }
+}
+@media all and (max-width: 768px){
+    .header-left, .header-right{
+        width: 100%;
+    }
+    .header-right ul{
+        text-align: left;
+    }
+}

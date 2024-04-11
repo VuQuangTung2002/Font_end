@@ -1,0 +1,21 @@
+<fieldset style="width: 100px; margin: auto">
+    <legend>
+        javascript
+    </legend>
+    <input type="text" id="txt">
+    <input type="button" ondblclick="settext();" value="click">
+    <h1 id="show"></h1>
+    </fieldset>
+    <script>
+        function settext(){
+        var text = document.getElementById("txt").value;
+        if(text == ""){
+            document.getElementById("txt").setAttribute("style","border: 1px solid yellow");
+        }
+        else{
+            document.getElementById("txt").removeAttribute("style");
+            document.getElementById("show").innerHTML = text;
+        }
+    }
+
+    </script>

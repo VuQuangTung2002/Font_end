@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="width: 300px;margin: auto">
+<legend>
+    change map
+</legend>
+<div style="margin-bottom: 5px;">
+<select id="drd-map" style="width: 100%;" onchange="changeMap();">
+<option value="m1.jpg">popular map</option>
+<option value="m2.jpg">popular map</option>
+<option value="m3.jpg">popular map</option>
+</select>
+</div>
+<div id="show" style="text-align: center;"><img id="img-map" src="m1.jpg"></div>
+    </fieldset>
+    <script>
+        // trong javacript co ham tu dong phat hien su kien cua the html
+        // phat hien su kien click cua the html 
+        // phat hien su kien onchange cuar the html co id  = drd-map
+
+        document.getElementById("drd-map").addEventListener("change",function(){
+            var value = document.getElementById("drd-map").value;
+            document.getElementById("img-map").setAttribute("src",value);
+        })
+    </script>
+</body>
+</html>

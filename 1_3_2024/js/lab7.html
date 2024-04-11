@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="box">
+        <img src="image/a1.jpg" id="img-show">
+        <div class="press">press</div>
+        <div class="next">next</div>
+    </div>
+    <style>
+        .box{
+            width: 600px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            margin: 20px auto;
+        }
+        .next{
+            width: 80px;
+            line-height: 50px;
+            background: black;
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 130px;
+            right: 0px;
+            visibility: hidden;
+        }
+        .press{
+            width: 80px;
+            line-height: 50px;
+            background: black;
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 130px;
+            visibility: hidden;
+
+        }
+        .box:hover .next{
+            visibility: visible;;
+        }
+        .box:hover .press{
+            visibility: visible;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            // khai bao danh sach anh
+            var slide = new Array();
+            slide[0] = "image/a1.jpg";
+            slide[1] = "image/a2.jpg";
+            slide[2] = "image/a3.jpg";
+            slide[3] = "image/a4.jpg";
+            slide[4] = "image/a5.jpg";
+            var n =0;
+            $(".next").click(function(){
+                n++;
+                $("#img-show").fadeOut(function()
+                {
+                    // thay doi thuoc tinh
+                    $("#img-show").attr("src",slide[n]);
+                    $("#img-show").fadeIn();
+                    if(n == slide.length){
+                        n = 0;
+                    }
+                });
+            });
+
+            $(".press").click(function(){
+                // neu n ==0 thi cai dat n la anh cuoi cung
+                if(n==0){
+                    n = slide.length ;
+                    n--;
+                    $("#img-show").fadeOut(function()
+                {
+                    // thay doi thuoc tinh
+                    $("#img-show").attr("src",slide[n]);
+                    $("#img-show").fadeIn();
+                    if(n == slide.length){
+                        n = 0;
+                    }
+                });
+                }
+
+                
+            });
+
+        });
+    </script>
+</body>
+</html>

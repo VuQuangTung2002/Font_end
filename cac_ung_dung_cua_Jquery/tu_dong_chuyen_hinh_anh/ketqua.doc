@@ -1,0 +1,3 @@
+- có thể tự động chuyển hình ảnh 
+- khi lướt chuột vào một nút ctsp1, ctsp2, ctsp3, ctsp4 thì hàm setInner sẽ dừng lại 
+- khi thoát chuột thì nó sẽ bắt đầu tự động chuyển hình ảnh tiếp

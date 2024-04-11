@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+
+</head>
+<body>
+    <fieldset style="width: 500px;margin: auto;">
+        <legend>hieu ung anh</legend>
+        <div style="margin-bottom: 5px;">
+            <input type="button" id="h1" value="h1">
+            <input type="button" id="h2" value="h2">
+            <input type="button" id="h3" value="h3">
+            <input type="button" id="h4" value="h4">
+            <input type="button" id="h5" value="h5">
+        </div>
+        <div style="margin-bottom: 5px;">
+            <input type="button" id="fadeOut" value="out">
+            <input type="button" id="fadeInt" value="in">
+            <input type="button" id="faceToggle" value="toggle">
+        </div>
+        <div style="margin-bottom: 5px;">
+            <input type="button" id="slideup" value="slideout">
+            <input type="button" id="slideout" value="slidein">
+            <input type="button" id="slidetoggle" value="slidetoggle">
+        </div>
+        <br>
+        <img src="image/a1.jpg" id="img-show" style="width: 500px;">
+        
+    </fieldset>
+    <script>
+        $(document).ready(function(){
+            $("#h1").click(function(){
+                $("#img-show").hide();
+            });
+            $("#h2").click(function(){
+                $("#img-show").hide(1000);
+            });
+            $("#h3").click(function(){
+                $("#img-show").hide(1000,function(){
+                    alert("an di va xuat hien dong alert");
+                });
+            });
+            // hien thi the html dung show
+            $("#h4").click(function(){
+                $("#img-show").show(1000);
+            });
+            // hien thi toggle
+            $("#h5").click(function(){
+                $("#img-show").toggle(1000);
+            });
+            $("#fadeOut").click(function(){
+                $("#img-show").fadeOut(2000);
+            });
+            $("#fadeInt").click(function(){
+                $("#img-show").fadeIn(2000);
+            });
+            $("#faceToggle").click(function(){
+                $("#img-show").fadeToggle();
+            });
+
+            // slideup , slideout, slidetoggle
+            $("#slideup").mouseover(function(){
+                $("#img-show").slideUp();
+            });
+            $("#slideout").mouseover(function(){
+                $("#img-show").slideDown();
+            });
+            $("#slidetoggle").click(function(){
+                $("#img-show").slideToggle();
+            });
+
+
+
+            // the html mo dan va mat di
+
+        });
+    </script>
+</body>
+</html>

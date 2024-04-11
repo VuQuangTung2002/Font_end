@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="number" style="text-align: center"></h1>
+    <fieldset style="width: 300px;margin: auto;">
+        <legend>javacript</legend>
+        <div style="text-align: center">
+            <input type="button" value="start" id="start" onclick="start();">
+            <input type="button" value="stop" id="stop" onclick="stop();">
+        </div>
+    </fieldset>
+    <script>
+        var n = 0;
+        var id;
+        function start(){
+           
+            id = setInterval(function() {
+                n++;
+                document.getElementById("number").innerHTML = n;
+               
+            },1000); 
+        }
+        function stop(){
+            
+                    clearInterval(id);
+                
+        }
+    </script>
+</body>
+</html>

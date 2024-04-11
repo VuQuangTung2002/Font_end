@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <style>
+        .box{
+            position: relative;
+            margin: auto;
+            width: 500px;
+            height: 400px;
+            overflow: hidden;
+            
+        }
+        .box img{
+            overflow: hidden;
+        }
+    </style>
+    <div class="box">
+        <img src="image/a1.jpg" id="show">
+    </div>
+    <script>
+        var slide = new Array();
+        slide[0] = "image/a1.jpg";
+        slide[1] = "image/a2.jpg";
+        slide[2] = "image/a3.jpg";
+        slide[3] = "image/a4.jpg";
+        slide[4] = "image/a5.jpg";
+        var n=0;
+        setInterval(function(){
+            n++;
+            $("#show").fadeOut(function(){
+                $("#show").attr("src",slide[n]);
+                $("#show").fadeIn();
+
+            });
+            if(n== slide.length){
+                n=0;
+            }
+        },1000);
+
+    </script>
+</body>
+</html>

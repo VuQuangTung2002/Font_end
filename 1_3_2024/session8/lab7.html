@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab7</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <img src="images/a1.jpg" id="img-show">
+        <div class="prev">prev</div>
+        <div class="next">next</div>
+    </div>
+    <style>
+        .box{width: 600px; height: 300px; margin:auto; overflow: hidden; position: relative;}
+        .next{width: 80px; line-height: 50px; background:black; color: white; text-align: center; position: absolute; top: 130px; right: 0px; visibility: hidden; cursor: pointer;}
+        .prev{width: 80px; line-height: 50px; background:black; color: white; text-align: center; position: absolute; top: 130px; visibility: hidden; cursor: pointer;}
+        .box:hover .next{visibility: visible;}
+        .box:hover .prev{visibility: visible;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            //khai báo array chứa danh sách ảnh
+            var slide = new Array();
+            slide[0] = "images/a1.jpg";
+            slide[1] = "images/a2.jpg";
+            slide[2] = "images/a3.jpg";
+            slide[3] = "images/a4.jpg";
+            slide[4] = "images/a5.jpg";
+            //khai báo vị trí ảnh
+            var n = 0;
+            $(".next").click(function(){
+                n++;
+                //ẩn ảnh có id=img-show
+                $("#img-show").fadeOut(function(){
+                    //thay đổi lại giá trị của thuộc tính src của id=img-show
+                    $("#img-show").attr("src",slide[n]);
+                    //hiển thị ảnh
+                    $("#img-show").fadeIn();
+                });
+                //nếu n ở vị trí cuối cùng thì reset n
+                if(n == slide.length)
+                    n = 0;
+            });
+            $(".prev").click(function(){
+                //nếu n == 0 thì set n là ảnh cuối
+                if(n == 0)
+                    n = slide.length;
+                n--;
+                //ẩn ảnh có id=img-show
+                $("#img-show").fadeOut(function(){
+                    //thay đổi lại giá trị của thuộc tính src của id=img-show
+                    $("#img-show").attr("src",slide[n]);
+                    //hiển thị ảnh
+                    $("#img-show").fadeIn();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

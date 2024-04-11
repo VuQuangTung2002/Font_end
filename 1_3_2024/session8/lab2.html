@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            //phát hiện sự kiện click của class=txt
+            $("#btn").click(function(){
+                //lấy giá trị của class=txt: sử dụng hàm val() để lấy giá trị
+                str = $(".txt").val();
+                //set giá trị vào id=show
+                $("#show").html(str);
+            });
+        });
+    </script>
+    <fieldset style="width:300px; margin:auto">
+        <legend>Jquery</legend>
+        <input type="text" class="txt"> <input type="button" id="btn" value="Click">
+        <h1 id="show"></h1>
+    </fieldset>
+</body>
+</html>

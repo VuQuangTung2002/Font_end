@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    div{
+        margin-top: 20px;
+        
+    }   
+    .inline1,.inline2,.inline3{
+        display: inline;
+        border: 1px dashed green;
+    } 
+    .block1,.block2,.block3{
+        display: block;
+        border: 1px solid black;
+    }
+    .inline_block1,.inline_block2,.inline_block3{
+        border: 1px solid black;
+        display: inline-block;
+    }
+    </style>
+    <div class="block1">dinh dang css theo kieu block</div>
+    <div class="block2">dinh dang css theo kieu block</div>
+    <div class="block3">dinh dang css theo kieu block</div>
+
+
+    <div class="inline1">dinh danh css theo kieu inline</div>
+    <div class="inline2">dinh danh css theo kieu inline</div>
+    <div class="inline3">dinh danh css theo kieu inline</div>
+
+    <div class="inline_block1">dinh dang css theo kieu inline-block</div>
+    <div class="inline_block2">dinh dang css theo kieu inline-block</div>
+    <div class="inline_block3">dinh dang css theo kieu inline-block</div>
+    <style>
+        ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            text-align: center;
+            background-color: blue;
+            line-height: 40px;
+        }
+        ul li{
+            display: inline-block;
+            
+        /* vertical-align : dinhd ang tren , duoi va duoi */
+        }
+        ul li a{
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+        ul li a:hover{
+            color: red;
+            background-color: yellow;
+        }
+        
+    </style>
+    <nav>
+        <ul>
+            <li><a href="">Trang chu</a></li>
+            <li><a href="">Tin Tuc</a></li>
+            <li><a href="">San Pham</a></li>
+            <li><a href="">Lien He</a></li>
+        </ul>
+
+    </nav>
+</body>
+</html>

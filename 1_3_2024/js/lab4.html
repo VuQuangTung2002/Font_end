@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            // phat hien su kien cua click 
+            $("#btn").click(function(){
+                str = $(".txt").val();
+                if(str == ""){
+                    $(".txt").attr("style", "border: 1px solid red");
+                }
+                else{
+                $("#show").html(str);
+                }
+            });
+        });
+    </script>
+    <fieldset style="width: 300px;margin: auto;">
+        <legend>
+            jquery
+        </legend>
+        <input type="text" class="txt">
+        <input type="button" id="btn" value="click">
+        <h1 id="show"></h1>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <fieldset style="margin: auto;width: 300px;">
+        <legend>cong 2 so</legend>
+        <table cellspacing="5">
+            <tr>
+                <td>so 1 </td>
+                <td><input type="number" id="so1"></td>
+            </tr>
+            <tr>
+                <td>so 2 </td>
+                <td><input type="number" id="so2"></td>
+            </tr>
+            <tr>
+                <td>Ket Qua</td>
+                <td><input type="text" id="ket_qua"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" id="thuc_hien" value="thuc hien"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        $(document).ready(function(){
+            $("#thuc_hien").click(function(){
+            var so1 = $("#so1").val(); // lay gia tri cua so 1 nhap vao
+            var so2 = $("#so2").val(); // lay gia tri cua so 2 nhap vao
+            // phai ep kieu de chuyen sang kieu so
+            var tong = parseInt(so1) + parseInt(so2);
+            var ket_qua = so1 + "+" +so2+ "="+ tong; //
+            $("#ket_qua").val(ket_qua);
+            });
+        });
+    </script>
+</body>
+</html>

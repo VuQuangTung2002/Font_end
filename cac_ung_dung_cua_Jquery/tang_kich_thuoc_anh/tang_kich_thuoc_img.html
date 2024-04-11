@@ -1,0 +1,24 @@
+ <!-- ảnh sẽ tự động tăng khi  người dùng di chuyển vào ảnh ,và sẽ tự động giảm khi người dùng lướt ảnh ra-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="tang-kich-thuoc">
+        <img src="image/chuong-thong-bao.jpg">
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".tang-kich-thuoc").hover(function(){
+                $(this).find("img").css("transform","scale(1.2)");
+            },function(){
+                $(this).find("img").css("transform","scale(1)");
+            });
+        });
+    </script>
+</body>
+</html>

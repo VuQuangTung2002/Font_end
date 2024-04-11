@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* co man hinh khac nhau */
+        /* co man hinh >= 1200 px -> màu tím */
+        body{
+            background-color: aquamarine;
+        }
+        @media all and (max-width: 1200px){
+            /* viet lai css tuong ung voi co man hinh nay */
+            body{
+                background-color: blue;
+            }
+        }
+        @media all and (max-width: 992px){
+            body{
+                background-color: black;
+            }
+        }
+        @media all and (min-width: 768px){
+            /* viet lai css tuong ung voi co man hinh nay */
+            body{
+                background-color: red;
+            }
+        }
+
+    </style>
+</body>
+</html>

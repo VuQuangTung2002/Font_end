@@ -1,0 +1,46 @@
+/* độ rộng màn hình <= 100px thì đặt lại độ rộng khối wrapper */
+@media screen and (max-width:1000px) {
+    .wrapper{width: 100%;}
+}
+/* cỡ màn hình 768px */
+@media all and (max-width:768px){
+    /* set lại class header-left, header-right để mỗi khối trên một hàng */
+    .header-left, .header-right{
+        width: 100%;
+    }
+    .header-right ul{
+        text-align: left;
+    }
+}
+/* resonsive menu */
+@media all and (max-width:768px){
+    /* mỗi li trên một hàng */
+    .menu ul li{
+        display: block;
+        border-bottom: 1px solid #f7ece6;
+    }
+}
+/* responsive content */
+@media all and (max-width:1000px){
+    /* chuyển kích thước từ px sang %, cho mỗi khối trên một dòng */
+    .content-left img{
+        width: 100%;
+    }
+    .content-left{
+        width: 71%;
+    }
+    .content-right{
+        width: 29%;
+    }    
+}
+@media all and (max-width:768px){
+    .content-left, .content-right{
+        width: 100%;
+    }
+}
+/* responsive category */
+@media all and (max-width:768px){
+    .category ul li{
+        width: 100%;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="box">
+        <img src="image/a1.jpg" id="img-show">
+    </div>
+    <style>
+        .box{
+            width: 600px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            margin: 20px auto;
+        }
+       
+    </style>
+    <script>
+        $(document).ready(function(){
+            // khai bao danh sach anh
+            var slide = new Array();
+            slide[0] = "image/a1.jpg";
+            slide[1] = "image/a2.jpg";
+            slide[2] = "image/a3.jpg";
+            slide[3] = "image/a4.jpg";
+            slide[4] = "image/a5.jpg";
+            var n =0;
+            setInterval(function(){
+                $("#img-show").click(function(){
+                n++;
+               
+                    // thay doi thuoc tinh
+                    $("#img-show").fadeOut(function(){
+                        $("#img-show").attr("src",slide[n]);
+                    $("#img-show").fadeIn();
+                    });
+                    
+
+                
+            });
+            if(n== slide.length){
+                n=0;
+            }
+            },2000);
+           
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab8</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <img src="images/a1.jpg" id="img-show">
+    </div>
+    <style>
+        .box{width: 600px; height: 300px; margin:auto; overflow: hidden; position: relative;}        
+    </style>
+    <script>
+        $(document).ready(function(){
+            //khai báo array chứa danh sách ảnh
+            var slide = new Array();
+            slide[0] = "images/a1.jpg";
+            slide[1] = "images/a2.jpg";
+            slide[2] = "images/a3.jpg";
+            slide[3] = "images/a4.jpg";
+            slide[4] = "images/a5.jpg";
+            //khai báo vị trí ảnh
+            var n = 0;
+            setInterval(function(){
+                n++;
+                $("#img-show").fadeOut(function(){                    
+                    //thay đổi lại giá trị của thuộc tính src của id=img-show
+                    $("#img-show").attr("src",slide[n]);
+                    //hiển thị ảnh
+                    $("#img-show").fadeIn();
+                });
+                //nếu n ở vị trí ảnh cuối cùng thì reset n
+                if(n == slide.length)
+                    n = 0;
+            },2000);
+            
+        });
+    </script>
+</body>
+</html>

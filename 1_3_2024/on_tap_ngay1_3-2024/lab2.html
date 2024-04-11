@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>Cộng 2 số</legend>
+        <table>
+            <tr>
+                <td>Số 1</td>
+                <td><input type="number" id="so1"></td>
+            </tr>
+            <tr>
+                <td>Số 2</td>
+                <td><input type="number" id="so2"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="ketqua"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="thuchien" value="Thực hiện"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        $(document).ready(function(){
+            $("#thuchien").click(function(){
+                var sothu1 = $("#so1").val();
+                var sothu2 = $("#so2").val();
+                var tong = parseInt(sothu1) + parseInt(sothu2);
+                var ketqua1 = sothu1 + " + " + sothu2 + " = " + tong;
+                $("#ketqua").text(ketqua1);
+            });
+        });
+    </script>
+</body>
+</html>

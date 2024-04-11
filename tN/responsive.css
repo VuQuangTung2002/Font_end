@@ -1,0 +1,13 @@
+@media screen and(max-width: 568px){
+   a {
+      
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
+      font-weight: bold;
+      font-size: 8px;
+  
+  }
+}
+@media screen and(max-width: 687px){
+   
+}

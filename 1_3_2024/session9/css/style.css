@@ -1,0 +1,104 @@
+body{
+    padding:0px;
+    margin:0px;
+    font-family: Arial;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.wrapper{
+    width: 1000px;
+    margin:auto
+}
+.header{
+    background: url('../images/header.jpg');
+    line-height: 19px;
+    color:white;
+}
+.header-left{
+    width: 50%;
+    float: left;
+}
+.header-left span{
+    padding-left: 10px;
+}
+.header-right{
+    width: 50%;
+    float: left;
+}
+.header-right ul{
+    padding: 0px;
+    margin:0px;
+    list-style: none;
+    text-align: right;
+}
+.header-right ul li{
+    display: inline;
+}
+.header-right a{
+    color:white;
+    padding:10px;
+}
+.banner img{
+    /* ảnh thì nên set đổ rộng theo % để phù hợp với kích thước màn hình */
+    width: 100%;
+}
+.menu{
+    border-top: 3px solid #ad6f4a;
+    margin-top: -4px;
+    border-bottom: 1px solid #f3ece4;
+    line-height: 25px;
+}
+.menu ul{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+}
+.menu ul li{
+    display: inline;
+}
+.menu ul a{
+    padding:15px;
+    font-weight: bold;
+}
+.content{
+    margin-top: 15px;
+}
+.content-left{
+    width: 710px;
+    text-align: center;
+    float: left;
+}
+.content-right{
+    width: 290px;
+    float: left;
+}
+.content-right ul{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+    box-shadow: 2px 2px 2px black;
+}
+.content-right li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #cdcdcd;
+}
+.category{
+    margin-top: 15px;
+    line-height: 52px;
+    background-image: url('../images/category.jpg');
+}
+.category ul{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+}
+.category li{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.category a{font-weight: bold;}

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>mysapo.net</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+     <!-- /thẻ messenger -->
+    <!-- / các thẻ đứng im -->
+    <!-- bao quanh nen-->
+    <div class="wrapper">
+        <!-- header -->
+        <div class="header">
+        <!-- header top -->
+        <div class="header-top">
+            <div class="header-top-left">
+                <ul>
+                    <li><img src="image/hotline.jpg">
+                    <a href="#">190000010</a>
+                    </li>
+                    <li><img src="image/email.jpg">
+                    <a href="#">vutung1234567890@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-top-right">
+                <ul>
+                    <li><span class="timkiem"><input type="text" placeholder="Tìm Kiếm Sản Phẩm ..."></span></li>
+                    <li><img src="image/mode-taikhoan.jpg" alt="tai khoan">
+                    <ul class="menu2">
+                            <li><a href="#">Đăng Nhập</a></li>
+                            <li><a href="#">Đăng Kí</a></li>
+                    </ul>
+                    </li>
+                    <li><img src="image/mode-giohang.jpg" alt="khong co san pham nao"></li>
+                </ul>
+                <div class="timkiem">
+                    <img src="image/mode-tim-kiem.jpg">
+                </div>
+            </div>
+        </div>
+        <!-- /header top -->
+        <!-- header menu -->
+        <div class="header-menu">
+            <div class="anhdaidien">
+                <img src="image/anh-dai-dien.jpg" alt="anh dai dien">
+            </div>
+            <div class="menuchinh">
+                <ul>
+                    <li><a href="file:///D:/chuyen_tu_o_c/xamm3/htdocs/khoa_fontend_react/font_end_html/BTL/main.html">Trang Chủ</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="#">Sản Phẩm</a> <img src="image/mui-ten-chi-xuong.jpg">
+                    <ul class="sanpham-bac2">
+                        <li><a href="">Sản Phẩm Mới</a>
+                            <ul class="sanpham-bac3">
+                                <li><a href="#">Thời Trang Nam</a></li>
+                                <li><a href="#">Thời Trang Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Sản Phẩm Khuyến Mại</a></li>
+                        <li><a href="">Sản Phẩm Nổi Bật</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!-- /header menu -->
+        <!-- header / san pham -->
+            <div class="background_sanpham">
+                <div class="row">
+                    <div class="col-xs-12 a-left">
+                        <ul class="breadcrumb">					
+                            <li class="home">
+                                <a title="Trang chủ" itemprop="url" href="/" style="text-decoration: none;color: black"><span id="chuyenmau" onmouseover="setmau();">Trang chủ</span></a><span class="mr_lr">&nbsp;/&nbsp;</span>
+                            </li>
+                            <li><strong ><span style="color: #fe80a3;"> Tất cả sản phẩm</span></strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function setmau(){
+                    document.getElementById("chuyenmau").addEventListener("mouseover", function() {
+                        document.getElementById("chuyenmau").setAttribute("style","color: red");
+                    }    
+                    );
+                    document.getElementById("chuyenmau").addEventListener("mouseout", function() {
+                        document.getElementById("chuyenmau").setAttribute("style","color: back");
+                    }    
+                    );
+                }
+            </script>
+        <!-- / header / san pham -->
+        <!-- san pham -->
+        <div class="sanpham">
+        <!-- san pham trai -->
+        <div class="sanphamtrai">
+            <!-- danh muc san pham -->
+            
+            <div id="danhmucsanpham" style="border: 1px solid black;">
+                <div class="tieudedanhmuc">
+                    <div class="tieude">
+                        <span>Danh Muc San Pham</span>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Giới Thiệu</a></li>
+                    <li><a href="" id="sanpham" onclick="sanpham1();">Sản Phẩm</a>
+                    <div id="bacthu2" style="display: none;">
+                        <ul>
+                            <li><a href="" id="bacthu21" onclick="bacthu3();">Sản Phẩm Mới</a>
+                            <div id="bacthu3" style="display: none;">
+                                <ul>
+                                <li><a href="">Thời Trang Nam</a></li>
+                                <li><a href="">Thời Trang Nữ</a></li>
+                                </ul>
+                            </div>
+                            </li>
+                            <li><a href="">Sản Phẩm Khuyến Mại</a></li>
+                            <li><a href="">Sản Phẩm Nổi Bật</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><a href="">Tin Tức</a></li>
+                    <li><a href="">Liên Hệ</a></li> 
+                </ul>
+
+            </div>
+            
+        
+
+            <!-- javascript -->
+            <script>
+             
+                var bacthu2 =document.getElementById("bacthu2");
+                var bacthu3 = document.getElementById("bacthu3");
+                var sanpham = document.getElementById("sanpham");
+                function sanpham1(){
+                    document.getElementById("sanpham").addEventListener("click",function(){
+                        if(bacthu2.style.display == "none"){
+                            bacthu2.style.display = "block";
+                        }
+                        else{
+                            bacthu2.style.display = "none";
+                        }
+                    })   
+                }
+                function bacthu3(){
+                    document.getElementById("bacthu21").addEventListener("click",function(){
+                        if(bacthu3.style.display == "none"){
+                            bacthu3.style.display = "block";
+                        }
+                        else{
+                            bacthu3.style.display = "none";
+                        }
+                    })
+                }
+            </script>
+            <!-- / javascript -->
+            <!-- / danh muc san pham -->
+            <!-- tim theo muc gia -->
+            <div class="timtheomucgia">
+                <div class="boloc">Bộ Lọc</div>
+                <div class="timtheogia">
+                    <div class="tieudegia">
+                        <span>TÌM THEO MỨC GIÁ</span>
+                    </div>
+                    <ul>
+                        <li><img src="product/o_vuong.png" id="ovuong"><a href="" id="set" onclick="setovuong();">Giá dưới 100.000đ</a></li>
+                        <li><img src="product/o_vuong.png"><a href="">100.000đ - 200.000đ</a></li>
+                        <li><img src="product/o_vuong.png"><a href="">200.000đ - 300.000đ</a></li>
+                        <li><img src="product/o_vuong.png"><a href="">300.000đ - 500.000đ</a></li>
+                        <li><img src="product/o_vuong.png"><a href="">500.000đ - 1.000.000đ</a></li>
+                        <li><img src="product/o_vuong.png"><a href="">Giá trên 1.000.000đ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="thuonghieu">
+                <div class="tieudethuonghieu">
+                    <span>Thương Hiệu</span>
+                </div>
+                <ul>
+                    <li><img src="product/o_vuong.png" id="ovuong"><a href="">LG</a></li>
+                </ul>
+            </div>
+            <script>
+                function setovuong() {
+                var image = document.getElementById("ovuong");
+                if (image) {
+                image.setAttribute("src", "image/o_vuong_co_tich.png");
+                }
+                }
+
+            </script>
+            <!-- / tim theo muc gia -->
+            <!-- thuong hieu -->
+
+            <!-- / thuong hieu -->
+            <!-- mau sac -->
+            <div class="mausac">
+                <div class="tieudemausac">
+                    <span>Màu Sắc</span>
+                </div>
+                <ul>
+                    <li><a href="" style="background-color: #f4fa58;"></a></li>
+                    <li><a href="" style="background-color: #ff0000;"></a></li>
+                    <li><a href="" style="background-color: #ffffff;"></a></li>
+                    <li><a href="" style="background-color: #df3a01;"></a></li>
+                    <li><a href="" style="background-color: #ff4000;"></a></li>
+                    <li><a href="" style="background-color: #fa58ac;"></a></li>
+                </ul>
+            </div>
+            <!-- /mau sac -->
+            <!-- hinh anh -->
+            <img src="image/hinhanh_thoi.png" style="margin-top: 50px;" width="500px" height="800px">
+            <!-- /hinh anh -->
+        </div>
+        <!-- / san pham trai -->
+        <!-- san pham phai -->
+        <div class="sanphamphai">
+            <!-- header -->
+            <div class="sanphamphai-header">
+                <div class="tieudesanphamphai">Tất cả Sản Phẩm</div>
+            <div class="sapxeptheothutu">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Sắp Xếp</b>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Mặc Định</a></li>
+                          <li><a class="dropdown-item" href="#">A -> Z</a></li>
+                          <li><a class="dropdown-item" href="#">Z -> A</a></li>
+                          <li><a class="dropdown-item" href="#">Giá Tăng Dần</a></li>
+                          <li><a class="dropdown-item" href="#">Giá Giảm Dần</a></li>
+                          <li><a class="dropdown-item" href="#">Hàm Mới Nhất</a></li>
+                          <li><a class="dropdown-item" href="#">Hàm Cũ Nhất</a></li>
+                        </ul>
+                      </li>
+                     
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              
+              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+`              </div>
+                </div>
+                <hr style="width: 100%;border: 1px solid black;margin-left: 30px;margin-top: -30px;">
+                
+                <!-- / header -->
+                <!-- body -->
+                <!-- phan san pham -->
+                <script>
+                    $(document).ready(function(){
+                        $(".danhmuc-sanpham .khung-sanpham").hover(function(){
+                            $(this).find("img").css("transform","scale(1.15)");
+                        },function(){
+                            $(this).find("img").css("transform","scale(1)");
+                        });
+                    });
+                   
+                </script>
+                <div class="danhmuc-sanpham">
+                    <div class="dong1">
+                    <!-- Khung sản phẩm 1 -->
+                    <div class="khung-sanpham">
+                        <img src="product/sp1.jpg" alt="Product 1" class="anh-sanpham">
+                        <div class="tieu-de">Đầm nữ cao cấp</div>
+                        <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                      </div>
+                      <div class="khung-sanpham">
+                          <img src="product/sp2.png" alt="Product 1" class="anh-sanpham">
+                          <div class="tieu-de">Đầm nữ cao cấp</div>
+                          <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                      </div>
+  
+                      <div class="khung-sanpham">
+                          <img src="product/sp3.png" alt="Product 1" class="anh-sanpham">
+                          <div class="tieu-de">Váy trắng cá tính</div>
+                          <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                      </div>
+
+                    </div>
+
+                    <!-- dong2 -->
+                    <div class="dong1">
+                        <!-- Khung sản phẩm 1 -->
+                        <div class="khung-sanpham">
+                          <img src="product/sp4.png" alt="Product 1" class="anh-sanpham">
+                          <div class="tieu-de">Đầm thời trang cao cấp</div>
+                          <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                        </div>
+    
+                        <div class="khung-sanpham">
+                            <img src="product/sp5.png" alt="Product 1" class="anh-sanpham">
+                            <div class="tieu-de">Đầm thời trang cao cấp</div>
+                            <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                        </div>
+    
+                        <div class="khung-sanpham">
+                            <img src="product/sp6.png" alt="Product 1" class="anh-sanpham">
+                            <div class="tieu-de">Áo nữ cá tính</div>
+                            <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                        </div>
+    
+                        </div>
+                        <!-- dong 3 -->
+                        <div class="dong1">
+                            <!-- Khung sản phẩm 1 -->
+                            <div class="khung-sanpham">
+                              <img src="product/sp1.jpg" alt="Product 1" class="anh-sanpham">
+                              <div class="tieu-de">Áo sơ mi nữ</div>
+                              <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                            </div>
+        
+                            <div class="khung-sanpham">
+                                <img src="product/sp2.png" alt="Product 1" class="anh-sanpham">
+                                <div class="tieu-de">Đầm thời trang cao cấp</div>
+                                <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                            </div>
+        
+                            <div class="khung-sanpham">
+                                <img src="product/sp3.png" alt="Product 1" class="anh-sanpham">
+                                <div class="tieu-de">Váy Midi Caro Vạt Lệch</div>
+                                <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                            </div>
+        
+                            </div>
+                            <!-- dong 4 -->
+                            <div class="dong1">
+                                <!-- Khung sản phẩm 1 -->
+                                <div class="khung-sanpham">
+                                    <img src="product/sp4.png" alt="Product 1" class="anh-sanpham">
+                                    <div class="tieu-de">Đầm suông nơ ruy băng</div>
+                                    <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                                  </div>
+                                  <div class="khung-sanpham">
+                                      <img src="product/sp5.png" alt="Product 1" class="anh-sanpham">
+                                      <div class="tieu-de">Áo tay loe</div>
+                                      <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                                  </div>
+                                  <div class="khung-sanpham">
+                                      <img src="product/sp6.png" alt="Product 1" class="anh-sanpham">
+                                      <div class="tieu-de">Áo tay loe</div>
+                                      <div class="gia">Giá: 150.000 <sup>đ</sup></div>
+                                  </div>
+                                </div>
+            
+                    <!-- Thêm các khung sản phẩm khác tương tự ở đây -->
+                </div>
+                <!-- / phan san pham -->
+                <!-- / body -->
+        </div>
+        <!-- / san pham phai -->
+        <!-- / san pham -->
+    </div>
+       
+<!-- header -->
+ <!-- Footer -->
+ <div class="footer">
+    <!-- footer o trai -->
+    <div class="footer-o-trai">
+        <img src="image/logo.jpg">
+        <div class="diachi">
+        <ul>
+            <li><img src="image/vi-tri.jpg"><a>Ladeco Building, 266 Doi Can Street, Ba Dinh District, Ha Noi</a></li>
+            <li><img src="image/dien-thoai.jpg"><a href="#">19006750</a></li>
+            <li><img src="image/email2.jpg"><a href="">vutung1234567890@gmail.com</a></li>
+        </ul>
+        </div>
+    </div>
+    <!-- /footer o trai -->
+    <!-- footer o giua -->
+    <div class="footer-o-giua">
+        <div class="footer-o-giua-1">
+            <span>Về Chúng Tôi</span>
+            <ul>
+                <li><a href="">Trang Chủ</a></li>
+                <li><a href="">Giới Thiệu</a></li>
+                <li><a href="">Sản Phẩm</a></li>
+                <li><a href="">Tin Tức</a></li>
+                <li><a href="">Liên Hệ</a></li>
+            </ul>
+        </div>
+        <div class="footer-o-giua-2">
+            <span>Chính Sách</span>
+            <ul>
+                <li><a href="">Trang Chủ</a></li>
+                <li><a href="">Giới Thiệu</a></li>
+                <li><a href="">Sản Phẩm</a></li>
+                <li><a href="">Tin Tức</a></li>
+                <li><a href="">Liên Hệ</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /footer o giua -->
+    <!-- footer o phai -->
+    <div class="footer-o-phai">
+        <div class="dangki">
+            <span>Đăng Kí Nhận Khuyến Mại</span>
+        </div>
+        <div class="text">
+            <input type="text" placeholder="Nhập Email Của Bạn ...">
+            <img src="image/phieu-gui.jpg">
+        </div>
+        <div class="nentang">
+            <ul>
+                <li><a href=""><img src="image/facebook.jpg" alt="FaceBook.com"></a></li>
+                <li><a href=""><img src="image/twitter.jpg" alt="Twitter.com"></a></li>
+                <li><a href=""><img src="image/instagram.jpg" alt="Íntagram.com"></a></li>
+                <li><a href=""><img src="image/in.jpg" alt="In.com"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /footer o phai -->
+    <!-- dong cuoi de chot bai -->
+    <div class="dongcuoi">
+        <span>Bản quyền thuộc về <b>HaluFashion </b> | Cung cấp bởi <b>Vũ Quang Tùng</b></span>
+    </div>
+    <!-- /dong cuoi de chot bai -->
+</div>
+<!-- /Footer -->
+
+ <!-- các thẻ đứng im  -->
+<!-- thông báo -->
+<div class="thongbao">
+<a><img src="image/chuong-thong-bao.jpg" id="thongbaone"></a>
+</div>
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+            $("#thongbaone").animate({rotate: '-60deg'}, "fast");
+            
+        }, 500);
+        setInterval(function(){
+            $("#thongbaone").animate({rotate: '0deg'}, "fast");
+            
+        }, 500);
+        setInterval(function(){
+            $("#thongbaone").animate({rotate: '60deg'}, "fast");
+            
+        }, 500);
+    });
+</script>
+
+<!-- /thông báo -->
+<!-- thẻ lên trang đầu -->
+<div class="len-trang-dau">
+<a href="#"><img src="image/nut-lendau.jpg"></a>
+</div>
+<!-- /thẻ lên trang đầu -->
+<!-- thẻ messenger -->
+<div class="messenger">
+<a href=""><img src="image/messenger.jpg"></a>
+</div>
+
+<!-- /bao quanh nen -->
+</div>
+</body>
+</html>

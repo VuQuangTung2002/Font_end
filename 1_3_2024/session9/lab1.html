@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1</title>
+</head>
+<body>
+    <style>
+        /*phát hiện các cỡ màn hình khác nhau*/
+        /* cỡ màn hình >= 1200px -> màu xanh lá cây */
+        body{background-color: green;}
+        /* cỡ màn hình <= 1200px -> màu xanh */
+        @media all and (max-width:1200px){
+            /* viết lại css tương ứng với cỡ màn hình này */
+            body{background-color: blue;}
+        }
+        @media all and (max-width:992px){
+            /* viết lại css tương ứng với cỡ màn hình này */
+            body{background-color: red;}
+        }
+        @media all and (max-width:768px){
+            /* viết lại css tương ứng với cỡ màn hình này */
+            body{background-color: purple;}
+        }
+        @media all and (max-width:576px){
+            /* viết lại css tương ứng với cỡ màn hình này */
+            body{background-color: yellow;}
+        }
+    </style>
+</body>
+</html>

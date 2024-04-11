@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2</title>
+</head>
+<body>
+    <div class="box1 xanh">box 1</div>
+    <div class="box2 do">box 2</div>
+    <div class="box3 tim">box 3</div>
+    <div class="box4 vang">box 4</div>
+    <style>
+        div{width: 25%; line-height: 100px;}
+        .xanh{background-color: green;}
+        .do{background-color: red;}
+        .tim{background-color: purple;}
+        .vang{background-color: yellow;}
+        /* cỡ màn hình > 1200px -> các khối hiển thị theo chiều ngang */
+        .box1, .box2, .box3, .box4{float: left;}
+        /* cỡ màn hình <= 1200px -> 1 box trên, 3 box dưới */
+        @media screen and (max-width:1200px){
+            .xanh{width: 100%;}
+            .do, .tim, .vang{width: 33.3333333%;}
+        }
+        /* cỡ màn hình 992px -> 3 khối trên, 1 khối dưới */
+        @media all and (max-width:992px){
+            .box1, .box2, .box3{width: 33.3333333%;}
+            .box4{width: 100%;}
+        }
+        /* cỡ màn hình 768px -> 2 khối trên, 2 khối dưới */
+        @media all and (max-width:768px){
+            .box1, .box2, .box3, .box4{width: 50%;}
+        }
+        /* cỡ màn hình 576px -> mỗi khối trên một hàng */
+        @media all and (max-width:576px){
+            .box1, .box2, .box3, .box4{width: 100%;}
+        }
+    </style>
+</body>
+</html>

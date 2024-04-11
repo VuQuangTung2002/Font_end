@@ -1,0 +1,120 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+/* tao khoi bao quanh trnag de set kich thuoc va can giua website */
+.wrapper{
+    width: 1000px;
+    margin: auto;
+}
+.menu-top{
+    /* anh nen thu 2 se duoc quet nagng pho rong ra  */
+    background-image: url("image/menu_top.jpg");
+    line-height: 24px;
+    display: flex;
+}
+.menu-top-left{
+    width: 175px;
+    font-size: 11px;
+    text-align: center;
+}
+.menu-top-right{
+    width: 825px;
+}
+.menu-top-right ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+.menu-top-right ul li{
+    display: inline;
+    border-right: 1px solid #dd4e01;
+
+}
+.menu-top-right ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #dd4e01;
+    
+}
+.menu-top-right ul li:last-child{
+    border-right-width: 0px;
+}
+.content{
+    display: flex;
+}
+.content .main{
+    width: 635px;
+}
+.content .left{
+    width: 175px;
+}
+.content .right{
+width: 190px;
+}
+.content .left .category ul{
+    
+    margin: 0px;
+    padding : 0px;
+    list-style: none;
+}
+.content .left .category ul li{
+    background-image: url('../26_1_2024/image/catelogy.jpg');
+    line-height: 21px;
+    margin-top: 1px;
+    padding-left: 25px;
+}
+.content .left .category ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.search{
+   
+    margin-top: 1px;
+}
+.search input[type="text"]{
+    width: 120px;
+}
+.product-hot{
+    margin-top: 10px;
+    background-image: url("image/hot-product.jpg");
+    background-repeat: no-repeat;
+
+}
+.product-hot ul{
+   
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    padding-top: 45px;
+}
+.product-hot ul li{
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+.static{
+    margin-top: 10px;
+    background-image: url("image/static.jpg");
+    height: 39px;
+
+}
+.static ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+.static ul li{
+    padding-left: 48px;
+    padding-top: 3px;
+}
+.menu-bottom{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    background-image: url("image/menu-bottom.jpg");
+    background-repeat: none;
+}
+

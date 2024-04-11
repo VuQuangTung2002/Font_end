@@ -1,0 +1,107 @@
+<!-- - có thể tự động chuyển hình ảnh 
+- khi lướt chuột vào một nút ctsp1, ctsp2, ctsp3, ctsp4 thì hàm setInner sẽ dừng lại 
+- khi thoát chuột thì nó sẽ bắt đầu tự động chuyển hình ảnh tiếp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js">
+
+    </script>
+    <style>
+.chitietsanphamtrai{
+width: 500px;
+height: auto;
+margin-left: 300px;
+display: block;
+margin-top: 30px;
+}
+.chitietsanphamtrai .chitietsanphamtrai1 ul{
+    display: flex;
+    margin-left: -20px;
+}
+.chitietsanphamtrai .chitietsanphamtrai1 ul li{
+    padding-right: 30px;
+}
+.chitietsanphamtrai .chitietsanphamtrai1 ul li img{
+    background-position: 100px 100px;
+    width: 90px;
+    height: 90px;
+}
+    </style>
+</head>
+<body>
+    <div class="chitietsanphamtrai">
+        <img src="image/chitietsanpham1.webp" id="ctsp1">
+        <div class="chitietsanphamtrai1">
+            <ul>
+                <li style="padding-left: 5px;"><img src="image/chitietsanpham1.webp" id="ctsp1-1"></li>
+                <li><img src="image/chitietsanpham2.webp" id="ctsp2"></li>
+                <li><img src="image/chitietsanpham3.webp" id="ctsp3"></li>
+                <li><img src="image/chitietsanpham4.webp" id="ctsp4"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var ds = new Array();
+            ds[0] = "image/chitietsanpham1.webp";
+            ds[1] ="image/chitietsanpham2.webp";
+            ds[2] = "image/chitietsanpham3.webp";
+            ds[3] = "image/chitietsanpham4.webp";
+            $("#ctsp1-1").mouseover(function(){
+                $("#ctsp1").fadeOut(function(){
+                    $("#ctsp1").attr("src",ds[0]);
+                    $("#ctsp1").fadeIn();
+                });
+            });
+            $("#ctsp2").mouseover(function(){
+                $("#ctsp1").fadeOut(function(){
+                    $("#ctsp1").attr("src",ds[1]);
+                    $("#ctsp1").fadeIn();
+                });
+            });
+            $("#ctsp3").mouseover(function(){
+                $("#ctsp1").fadeOut(function(){
+                    $("#ctsp1").attr("src",ds[2]);
+                    $("#ctsp1").fadeIn();
+                });
+            });
+            $("#ctsp4").mouseover(function(){
+                $("#ctsp1").fadeOut(function(){
+                    $("#ctsp1").attr("src",ds[3]);
+                    $("#ctsp1").fadeIn();
+                });
+            });
+
+            var n=0;
+            var k = setInterval(function(){
+                n++;
+                $("#ctsp1").fadeOut(function(){
+                    $("#ctsp1").attr("src",ds[n]);
+                    $("#ctsp1").fadeIn();
+                });
+                if(n==ds.length){
+                    n=0;
+                }
+            }, 2000);
+            $("#ctsp1-1, #ctsp2, #ctsp3, #ctsp4").mouseenter(function(){
+            clearInterval(k); // Stop the interval when mouse enters
+             });
+
+            $("#ctsp1-1, #ctsp2, #ctsp3, #ctsp4").mouseleave(function(){
+            k = setInterval(function(){
+            $("#ctsp1").fadeOut(function(){
+            $("#ctsp1").attr("src", ds[n]);
+            $("#ctsp1").fadeIn();
+            });
+            n = (n + 1) % ds.length;
+            }, 2000); // Resume the interval when mouse leaves
+});
+
+        });
+    </script>
+</body>
+</html>

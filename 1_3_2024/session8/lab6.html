@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab6</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <img src="images/a1.jpg" style="width: 300px;" id="img-show">
+    </div>
+    <input type="button" id="btn" value="animate" style="margin-top: 300px;">
+    <style>
+        .box{width: 300px; height: 200px; background-color: green;}
+        #img-show{position: absolute; top: 0px;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                //sử dụng hàm animate cho id=img-show
+                $("#img-show").animate({left:'900px'},"fast")
+            });
+        });
+    </script>
+</body>
+</html>

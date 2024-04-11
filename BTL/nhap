@@ -1,0 +1,541 @@
+
+.wrapper{
+    width: 1900px auto;
+    font-size: 14px;
+}
+.wrapper .thongbao{
+    position: fixed;
+    top: 650px;
+    left: 25px;
+    width: 70px;
+    height: 70px;
+
+}
+.wrapper .thongbao img{
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+}
+.wrapper .len-trang-dau{
+    position: fixed;
+    top: 600px;
+    right: 25px;
+    width: 70px;
+    height: 70px;
+}
+.wrapper .len-trang-dau img{
+    width: 55px;
+    height: 60px;
+    
+}
+.wrapper .messenger{
+    position: fixed;
+    top: 680px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+}
+.wrapper .messenger img{
+    width: 75px;
+    height: 75px;
+    border-radius: 30px ;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header-top{
+    background-image: url("image/header.jpg");
+    height: 60px;
+    display: flex;
+
+}
+
+.header-top .header-top-left{
+    width: 1383px;
+}
+.header-top .header-top-left ul{
+    padding-left: 65px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+
+}
+.header-top .header-top-left ul li{
+    padding-right: 40px;
+    display: flex;
+
+}
+.header-top .header-top-left ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    vertical-align: center;
+    text-align: center;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    line-height: 60px;
+}
+.header-top .header-top-left ul li img{
+    align-items: center;
+    height: 20px;
+    padding-top: 20px;
+}
+.header-top .header-top-left ul li a:hover{
+    color: red;
+}
+.header-top .header-top-right{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    width: 517px;
+
+}
+.header-top .header-top-right ul{
+    list-style: none;
+    margin: 0px;
+    padding-top: 0px;
+    line-height: 60px;
+    display: flex;
+}
+.header-top .header-top-right ul li{
+    padding-right: 20px;
+    position: relative;
+
+}
+.header-top .header-top-right ul li span input[type="text"]{
+    width: 327px;
+    height: 41px;
+    border-radius: 20px;
+
+}
+.header-top .header-top-right ul li .menu2{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: white;
+}
+.header-top .header-top-right ul li:hover .menu2{
+    display: block;
+}
+.header-top .header-top-right ul li .menu2 li{
+    width: 100px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    height: 30px;
+    padding-left: 5px;
+    padding-top:-10px;
+    text-align: left;
+    border: 0px solid white;
+
+}
+.header-top .header-top-right ul li .menu2 li a{
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+/* header menu */
+.header-menu{
+    background-image: url("image/nen-header-menu.jpg");
+    height: 152px;
+    position: relative;
+    top:0px;
+}
+.header-menu .anhdaidien img{
+    line-height: 152px;
+    position: absolute;
+    left: 80px;
+    top: 0px;
+}
+.menuchinh{
+    position: absolute;
+    left: 800px;
+    font-size: 20px;
+    
+}
+.menuchinh ul li:first-child{
+    border-top: 1px solid #f10480;
+    border-bottom: 1px solid #f10480;
+    
+}
+.menuchinh ul li:first-child a{
+ 
+}
+
+/* Style cho menu cấp 1 */
+.menuchinh > ul {
+    list-style: none;
+    display: flex;
+}
+
+.menuchinh > ul > li {
+    position: relative;
+}
+
+.menuchinh > ul > li > a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.menuchinh > ul > li:hover > a {
+    background-color: #f10480;
+    color: #fff;
+}
+
+/* Style cho menu cấp 2 */
+.sanpham-bac2 {
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    width: 200px;
+    height: 0px;
+    background-color: #fff;
+    display: none;
+}
+
+.menuchinh > ul > li:hover .sanpham-bac2 {
+    display: block;
+}
+
+.sanpham-bac2 > li > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+
+.sanpham-bac2 > li:hover > a {
+    background-color: #f10480;
+    color: #fff;
+}
+
+/* Style cho menu cấp 3 */
+.sanpham-bac3 {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 200px;
+    background-color: #fff;
+    display: none;
+}
+
+.sanpham-bac2 > li:hover .sanpham-bac3 {
+    display: block;
+}
+
+.sanpham-bac3 > li > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+
+.sanpham-bac3 > li:hover > a {
+    background-color: #f10480;
+    color: #fff;
+}
+/* header-anh */
+.header-anh{
+    margin-top: 10px;
+    padding: 0px;
+    position: relative;
+}
+.header-anh img{
+    height: 658px;
+    width: 100%;
+}
+.header-anh .nutchuyen1{
+    
+    height: 60px;
+    width: 42px;
+    position: absolute;
+    top: 355px;
+    left: 10px;
+}
+.header-anh .nutchuyen1 a img{
+    height: 60px;
+    width: 42px;
+}
+.header-anh .nutchuyen2{
+    height: 60px;
+    width: 42px;
+    position: absolute;
+    top: 355px;
+    right: 10px;
+}
+.header-anh .nutchuyen2 a img{
+    height: 60px;
+    width: 42px;
+}
+/* /header-anh */
+/* header footer */
+.header-hang-thoi-trang{
+    margin: 0px;
+    padding: 30px 48px;
+
+}
+.header-hang-thoi-trang ul{
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+    display: flex;
+    width: 1900px;
+}
+.header-hang-thoi-trang ul li{
+    padding-left: 43px;
+}
+.header-hang-thoi-trang ul li a img{
+    width: 550px;
+    height: 300px;
+}
+
+/* /header footer */
+/* sản phẩm mới */
+.san-pham-moi{
+    padding: 30px 48px;
+    margin: 0px;
+    width: 1900px;
+}
+.san-pham-moi .tieu-de-san-pham-moi{
+    background-image: url("image/san-pham-moi.jpg");
+    background-repeat: none;
+    height: 50px;
+    
+    
+
+}
+.san-pham-moi .tieu-de-san-pham-moi a{
+    color: White;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 860px;
+    line-height: 50px;
+}
+/* cac san pham moi */
+.cac-san-pham{
+    padding-top: 48px 120px;
+    margin: 0px;
+}
+.cac-san-pham ul{
+    display: flex;
+    list-style: none;
+}
+.cac-san-pham ul li{
+    padding-left: 40px;
+}
+.cac-san-pham ul li img{
+    width: 340px;
+    height: 340px;
+}
+.cac-san-pham ul li span a{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    padding-left: 30%;
+
+}
+.cac-san-pham ul li span a:hover{
+    color: #ff4b88;
+}
+
+.cac-san-pham ul li > nav{
+    font-size: 18px;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff4b88;
+    text-align: center;
+}
+/* /cac san pham moi */
+.mau-quang-cao-san-pham{
+    padding: 34px 48px;
+    margin: 0px;
+    width: 1900px;
+}
+.mau-quang-cao-san-pham ul{
+    list-style: none;
+    display: flex;
+}
+.mau-quang-cao-san-pham ul li{
+    padding: 15px;
+    
+}
+.mau-quang-cao-san-pham ul li a img{
+    width: 775px;
+    height: 325px;
+
+}
+/* / sản phẩm mới */
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>mysapo.net</title>
+</head>
+<body>
+   
+     <!-- /thẻ messenger -->
+    <!-- / các thẻ đứng im -->
+    <!-- bao quanh nen-->
+    <div class="wrapper">
+        
+        <!-- header -->
+        <div class="header">
+        <!-- header top -->
+        <div class="header-top">
+            <div class="header-top-left">
+                <ul>
+                    <li><img src="image/hotline.jpg">
+                    <a href="#">190000010</a>
+                    </li>
+                    <li><img src="image/email.jpg">
+                    <a href="#">vutung1234567890@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-top-right">
+                <ul>
+                    <li><span class="timkiem"><input type="text" placeholder="Tìm Kiếm Sản Phẩm ..."></span></li>
+                    <li><img src="image/mode-taikhoan.jpg" alt="tai khoan">
+                    <ul class="menu2">
+                            <li><a href="#">Đăng Nhập</a></li>
+                            <li><a href="#">Đăng Kí</a></li>
+                    </ul>
+                    </li>
+                    <li><img src="image/mode-giohang.jpg" alt="khong co san pham nao"></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /header top -->
+        <!-- header menu -->
+        <div class="header-menu">
+            <div class="anhdaidien">
+                <img src="image/anh-dai-dien.jpg" alt="anh dai dien">
+            </div>
+            <div class="menuchinh">
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="#">Sản Phẩm</a> <img src="image/mui-ten-chi-xuong.jpg">
+                    <ul class="sanpham-bac2">
+                        <li><a href="">Sản Phẩm Mới</a>
+                            <ul class="sanpham-bac3">
+                                <li><a href="#">Thời Trang Nam</a></li>
+                                <li><a href="#">Thời Trang Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Sản Phẩm Khuyến Mại</a></li>
+                        <li><a href="">Sản Phẩm Nổi Bật</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /header menu -->
+        <!-- header anh -->
+        <div class="header-anh">
+
+            <img src="image/trang-chu.webp">
+            <div class="nutchuyen1"><a href="#"><img src="image/nut-chuyentrang-1.jpg"></a></div>
+            <div class="nutchuyen2"><a href="#"><img src="image/nut-chuyentrang-x2.jpg"></a></div>
+        </div>
+        <!-- /header anh -->
+        <!-- header cac hang thoi trang -->
+        <div class="header-hang-thoi-trang">
+            <ul>
+                <li><a href=""><img src="image/thoi-trang-cong-so.jpg" alt="Thời Trang Công Sở"></a></li>
+                <li><a href=""><img src="image/thoi-trang-dao-pho.jpg" alt="Thời Trang Dạo Phố"></a></li>
+                <li><a href=""><img src="image/thoi-trang-dao-tiec.jpg" alt="Thời Trang Dạo Phố"></a></li>
+            </ul>
+        </div>
+        <!-- /header cac hang thoi trang -->
+        </div>
+        <!-- /header -->
+        <!-- san pham moi -->
+        <div class="san-pham-moi">
+
+            <div class="tieu-de-san-pham-moi">
+                <a>Sản Phẩm Mới</a>
+            </div>
+            <div class="cac-san-pham">
+                <ul>
+                    <li><a href="#">
+                        <img src="image/dam-thoi-trang-cao-cap.jpg">
+                    </a>
+                    <span><a href="#">Đầm Công Sở Cao Cấp</a></span>
+                
+                    <nav href="#">280.000 đ</nav>
+                    </li>
+                    <li><a href="#"><img src="image/ao-tay-loe.jpg"></a>
+                        <span><a href="#">Áo Tay Loe</a></span>
+                        <nav href="#">450.000 đ</nav>
+                    </li>
+                    <li><a href="#"><img src="image/dam-suong-no-ruy-bang.jpg"></a>
+                        <span><a href="#">Đầm suông nơ ruy băng</a></span>
+                        <nav href="#">540.000 đ</nav>
+                    </li>
+                    <li><a href="#"><img src="image/dam-cong-so-cao-cap.jpg"></a>
+                        <span><a href="#">Đầm Công Sở Cao Cấp</a></span>
+                        <nav href="#">500.000 đ</nav>
+                    </li>
+                </ul>
+            </div>
+            <div class="mau-quang-cao-san-pham">
+                <ul>
+                    <li><a href=""><img src="image/dam-xoe-xinh-san.jpg"></a></li>
+                    <li><a href=""><img src="image/bien-thoi-trang-vay-dam.jpg"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /san pham moi -->
+        <!-- san pham noi bat -->
+        <div class="san-pham-noi-bat">
+            <div class="tieu-de-san-pham-moi">
+                <a>Sản Phẩm Nổi Bật</a>
+            </div>
+            
+        </div>
+        <!-- /san pham noi bat -->
+         <!-- các thẻ đứng im  -->
+    <!-- thông báo -->
+    <div class="thongbao">
+        <a href=""><img src="image/chuong-thong-bao.jpg"></a>
+    </div>
+    <!-- /thông báo -->
+    <!-- thẻ lên trang đầu -->
+    <div class="len-trang-dau">
+        <a href="#"><img src="image/nut-lendau.jpg"></a>
+    </div>
+     <!-- /thẻ lên trang đầu -->
+     <!-- thẻ messenger -->
+     <div class="messenger">
+        <a href=""><img src="image/messenger.jpg"></a>
+    </div>
+    </div>
+    <!-- /bao quanh nen -->
+</body>
+</html>

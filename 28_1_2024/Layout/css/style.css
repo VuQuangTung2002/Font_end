@@ -1,0 +1,352 @@
+body{
+	padding:0px;
+	margin:0px;
+	font-family: Arial;
+	font-size: 12px;
+}
+/*tạo khối bao quanh trang để set kích thước và căn giữa website*/
+.wrapper{
+	width: 1000px;
+	/* căn khối ra giữa màn hình */
+	margin:auto;
+}
+.menu-top{
+	background-image: url('../images/menu-top.jpg');
+	line-height: 24px;
+	/*hiển thị con cấp 1 theo chiều ngang*/
+	display: flex;
+}
+.menu-top-left{
+	width: 175px;
+	font-size: 11px;
+	text-align: center;
+}
+.menu-top-right{
+	width: 825px;
+}
+.menu-top-right ul{
+	padding:0px;
+	margin:0px;
+	list-style: none;
+}
+.menu-top-right ul li{
+	/*hiển thị thẻ li theo chiều ngang*/
+	display: inline;
+	border-right: 1px solid #dd4e01;
+}
+.menu-top-right ul li a{
+	/*bỏ gạch chân*/
+	text-decoration: none;
+	font-weight: bold;
+	color: #dd4e01;
+	padding:15px;
+}
+/*tác động vào thẻ li cuối cùng*/
+.menu-top-right ul li:last-child{
+	border-right-width: 0px;
+}
+.content{
+	/*cho left, main, right hiển thị theo chiều ngang*/
+	display: flex;
+}
+.content .left{
+	width: 174px;
+}
+.content .main{
+	width: 636px;
+}
+.content .right{
+	width: 190px;
+}
+.content .left .category ul{
+	padding:0px; margin:0px; list-style: none;
+}
+.content .left .category ul li{
+	background-image: url('../images/category.jpg');
+	line-height: 21px;
+	margin-top: 1px;
+	padding-left: 25px;
+}
+.content .left .category ul li a{
+	text-decoration: none;
+	font-weight: bold;
+	color:white;
+}
+.search{
+	margin-top: 1px;
+}
+/*tác động vào thẻ input type=text*/
+.search input[type="text"]{
+	width: 120px;
+}
+.product-hot{
+	margin-top: 10px;
+	background-image: url('../images/product-hot.jpg');
+	background-repeat: no-repeat;
+	height: 425px;
+}
+.product-hot ul{
+	padding:0px; margin:0px; list-style: none;
+	padding-top: 47px;
+}
+.product-hot ul li{
+	padding-left: 7px;
+	padding-bottom: 11px;
+}
+.static{
+	margin-top: 10px;
+	height: 40px;
+	background-image: url('../images/static.jpg');
+}
+.static ul{
+	padding:0px;
+	margin:0px;
+	list-style: none;
+}
+.static ul li span{
+	font-weight: bold;
+}
+.static ul li{
+	padding-left: 48px;
+	padding-top: 3px;
+}
+.menu-bottom{
+	margin-top: 18px;
+	background-image: url('../images/menu-bottom.jpg');
+	background-repeat: no-repeat;
+}
+.menu-bottom ul{
+	padding:0px;margin: 0px;list-style: none;
+	text-align: center;
+	padding-top: 5px;
+}
+.menu-bottom ul li{
+	display: inline;	
+	border-right: 1px solid #b5930b;
+}
+.menu-bottom ul li a{
+	text-decoration: none;
+	color: #b5930b;
+	padding:15px;
+	font-weight: bold;
+}
+.footer-content{
+	background: #e9c946;
+	text-align: center;
+	color:white;
+	padding-bottom: 10px;
+}
+.footer-copyright{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+.slide{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.box-main{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.box-main .box-main-title{
+	background-image: url('../images/box-main.jpg');
+	background-repeat: none;
+	line-height: 28px;
+	color: #f55701;
+	font-weight: bold;
+	padding-left: 40px;
+}
+.box-main .product-new ul{
+padding: 0px;
+margin: 0px;
+list-style: none;
+/* cho cac the li hien thi theo chieu ngang */
+display: flex;
+}
+.box-main .product-new ul li{
+	width: 149px;
+	border: 1px solid #e3c54d;
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	padding-left: 5px;
+}
+.product-new .product-new-image{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.product-new .product-new-title{
+	color: #0a0300;
+	text-align: center;
+	
+}
+.product-new .product-new-title a{
+	text-decoration: none;
+	color: #f55701;
+}
+.product-new .product-new-link{
+	text-align: center;
+	margin-bottom: 5px;
+	color: #f55701;
+	
+}
+.product-new .product-new-link a{
+	text-align: center;
+	text-decoration: none;
+	color: #f55701;
+}
+.news-hot ul{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	
+
+}
+.news-hot .box-main-new-title a{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;
+	
+}
+.box-main-new-content{
+	display: flex;
+}
+.news-hot img{
+	margin-right: 5px;
+	border: 1px solid #f1f1f1;
+	padding: 5px;
+
+}
+.box-main-new-title{
+	position: relative;
+}
+.box-main-new-links a{
+text-decoration: NONE;
+position: absolute;
+bottom: 2px;
+right: 5px;
+color: #dd4e01;
+
+}
+.news-hot ul li{
+	padding: 15px;
+}
+.question-answer-title{
+	border-radius: 0 0 0 5px;
+	margin-top: 10px;
+	background-image: url('../images/question-answer.jpg');
+	height: 26px;
+}
+.question-answer-title span{
+	text-align: center;
+	padding-left: 90px;
+	vertical-align: center;
+	color: #dd4e01;
+	font-weight: bold;
+
+}
+.question-answer-content ul{
+padding: 0px;
+margin: 5px;
+list-style: none;
+
+
+
+}
+.question-answer-content ul li{
+	padding-left: 10px;
+	display: flex;
+}
+.question-answer-content ul li img{
+	margin-right: 15px;
+	
+}
+.question-answer-content{
+	border: 1px solid black;
+	margin-top: 10px;
+}
+.question-answer-content .send-question{
+	text-align: center;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	
+}
+.question-answer-content .send-question a{
+	text-decoration: none;
+}
+.support{
+	border: 1px solid black;
+	padding: 10px;
+}
+.support .support-title{
+	background-image: url('../images/support.jpg');
+	line-height: 25px;
+	background-repeat: none;
+	text-align: center;
+	font-weight: bold;
+	color: #dd4e01;
+	font-size: 15px;
+
+}
+.support .skype ul{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	text-align: center;
+}
+.support .skype ul li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.support .support-line{
+	border-bottom: 3px dotted #c8c8c8;
+}
+.support .support-contact{
+	background-image: url('../images/lien_he.jpg');
+	height: 45px;
+	background-repeat: none;
+	
+}
+.support .support-contact ul{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	color: #f55701;
+	font-size: 11px;
+}
+.support .support-contact ul li{
+	padding-left: 30px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.check-mail{
+	background-image: url("../images/check-mail.jpg");
+	background-repeat: none;
+	width: 184px;
+	height: 184px;
+	margin-top: 10px;
+}
+.check-mail ul{
+	padding-top: 55px;
+	padding-left: 10px;
+
+	list-style: none;
+	margin: 0px;
+}
+.check-mail ul li{
+	padding-top: 5px;
+
+}
+/* chi tac dong vao the input type =text */
+.check-mail ul li input[type="text"]{
+	width: 155px;
+}
+.check-mail ul li:last-child{
+	text-align: center;
+}
+
+
+

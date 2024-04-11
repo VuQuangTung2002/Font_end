@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <fieldset style="width: 700px; margin: auto;">
+        <legend>javascript</legend>
+        <div style="margin: 20px auto;display: flex;margin-right: 20px;">
+            <img src="image/a1.jpg" id="hide1" style="width: 70px; height: 70px;">
+            <img src="image/a2.jpg" id="hide2" style="width: 70px; height: 70px;">
+            <img src="image/a3.jpg" id="hide3" style="width: 70px; height: 70px;">
+            <img src="image/a4.jpg" id="hide4" style="width: 70px; height: 70px;">
+            <img src="image/a5.jpg" id="hide5" style="width: 70px; height: 70px;">
+            <input type="button" id="x1" value="Hide">
+            <input type="button" id="x2" value="Show">
+            <input type="button" id="x3" value="Toogle">
+        </div>
+        <div style="margin: 20px auto;display: flex;margin-right: 20px;">
+            <input type="button" id="fo" value="FadeOut">
+            <input type="button" id="fi" value="FadeIn">
+            <input type="button" id="ft" value="FadeToogle">
+        </div>
+        <div style="margin: 20px auto;display: flex;margin-right: 20px;">
+            <input type="button" id="su" value="SlideUp">
+            <input type="button" id="sd" value="SlideDown">
+            <input type="button" id="st" value="SlideToogle">
+        </div>
+
+        <img src="image/a1.jpg" style="width: 500px" id="img-show">
+
+    </fieldset>
+    <script>
+        $(document).ready(function(){
+            $("#x1").click(function(){
+                $("#img-show").hide(2000,function(){
+                    $("#img-show").show(2000,function(){});
+                    $("#img-show").attr("src","image/a2.jpg");
+                });
+            });
+            $("#x2").click(function(){
+                $("#img-show").show(function(){
+                    alert("da an di danh muc nay");
+                    
+                });
+            });
+            $("#x3").click(function(){
+                $("#img-show").toggle(2000);
+            });
+            $("#fo").click(function(){
+                $("#img-show").fadeOut(2000);
+            });
+            $("#fi").click(function(){
+                $("#img-show").fadeIn(2000);
+            });
+            $("#ft").mouseover(function(){
+                $("#img-show").fadeToggle(2000);
+            });
+            $("#su").click(function(){
+                $("img-show").slideUp(1000);
+            });
+            $("#sd").click(function(){
+                $("img-show").slideDown(1000);
+            });
+            $("#st").click(function(){
+                $("img-show").slideToggle(1000);
+            });
+        });
+
+    </script>
+</body>
+</html>

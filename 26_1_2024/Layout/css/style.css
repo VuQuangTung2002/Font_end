@@ -1,0 +1,143 @@
+body{
+	padding:0px;
+	margin:0px;
+	font-family: Arial;
+	font-size: 12px;
+}
+/*tạo khối bao quanh trang để set kích thước và căn giữa website*/
+.wrapper{
+	width: 1000px;
+	/* căn khối ra giữa màn hình */
+	margin:auto;
+}
+.menu-top{
+	background-image: url('../images/menu-top.jpg');
+	line-height: 24px;
+	/*hiển thị con cấp 1 theo chiều ngang*/
+	display: flex;
+}
+.menu-top-left{
+	width: 175px;
+	font-size: 11px;
+	text-align: center;
+}
+.menu-top-right{
+	width: 825px;
+}
+.menu-top-right ul{
+	padding:0px;
+	margin:0px;
+	list-style: none;
+}
+.menu-top-right ul li{
+	/*hiển thị thẻ li theo chiều ngang*/
+	display: inline;
+	border-right: 1px solid #dd4e01;
+}
+.menu-top-right ul li a{
+	/*bỏ gạch chân*/
+	text-decoration: none;
+	font-weight: bold;
+	color: #dd4e01;
+	padding:15px;
+}
+/*tác động vào thẻ li cuối cùng*/
+.menu-top-right ul li:last-child{
+	border-right-width: 0px;
+}
+.content{
+	/*cho left, main, right hiển thị theo chiều ngang*/
+	display: flex;
+}
+.content .left{
+	width: 174px;
+}
+.content .main{
+	width: 636px;
+}
+.content .right{
+	width: 190px;
+}
+.content .left .category ul{
+	padding:0px; margin:0px; list-style: none;
+}
+.content .left .category ul li{
+	background-image: url('../images/category.jpg');
+	line-height: 21px;
+	margin-top: 1px;
+	padding-left: 25px;
+}
+.content .left .category ul li a{
+	text-decoration: none;
+	font-weight: bold;
+	color:white;
+}
+.search{
+	margin-top: 1px;
+}
+/*tác động vào thẻ input type=text*/
+.search input[type="text"]{
+	width: 120px;
+}
+.product-hot{
+	margin-top: 10px;
+	background-image: url('../images/product-hot.jpg');
+	background-repeat: no-repeat;
+	height: 425px;
+}
+.product-hot ul{
+	padding:0px; margin:0px; list-style: none;
+	padding-top: 47px;
+}
+.product-hot ul li{
+	padding-left: 7px;
+	padding-bottom: 11px;
+}
+.static{
+	margin-top: 10px;
+	height: 40px;
+	background-image: url('../images/static.jpg');
+}
+.static ul{
+	padding:0px;
+	margin:0px;
+	list-style: none;
+}
+.static ul li span{
+	font-weight: bold;
+}
+.static ul li{
+	padding-left: 48px;
+	padding-top: 3px;
+}
+.menu-bottom{
+	margin-top: 18px;
+	background-image: url('../images/menu-bottom.jpg');
+	background-repeat: no-repeat;
+}
+.menu-bottom ul{
+	padding:0px;margin: 0px;list-style: none;
+	text-align: center;
+	padding-top: 5px;
+}
+.menu-bottom ul li{
+	display: inline;	
+	border-right: 1px solid #b5930b;
+}
+.menu-bottom ul li a{
+	text-decoration: none;
+	color: #b5930b;
+	padding:15px;
+	font-weight: bold;
+}
+.footer-content{
+	background: #e9c946;
+	text-align: center;
+	color:white;
+	padding-bottom: 10px;
+}
+.footer-copyright{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}

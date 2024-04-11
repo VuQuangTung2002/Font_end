@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <style>
+        #img-show{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #show{
+            margin-top: 400px;
+        }
+    </style>
+    <div>
+        <img src="image/chitietsanpham1.webp" id="img-show" style="width: 300px;">
+    </div>
+    <input type="button" value="animate" id="show">
+    <script>
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("#img-show").animate({left :'+=300px'},"faster");
+            });
+
+        });
+    </script>
+</body>
+</html>

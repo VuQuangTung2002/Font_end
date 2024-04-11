@@ -1,0 +1,91 @@
+<!--Mô Tả 
+    co 4 bức ảnh , có 2 nút bám , press (nút lùi), next (nút lên)
+    khi bấm vào nút press thì ảnh sẽ lùi lại phía sau
+    khi bấm vào nút next tiến lên phía trước (dịch chuyển ảnh sang phải, thay thế cho ảnh cũ)) 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+    <style>
+        .box{
+            position: relative;
+            margin: auto;
+            width: 500px;
+            height: 400px;
+            overflow: hidden;
+            
+        }
+        .box img{
+            overflow: hidden;
+        }
+        .next{
+            position: absolute;
+            right: 0px;
+            top: 170px;
+            line-height: 50px;
+            visibility: hidden;
+            background-color: black;
+            color: aliceblue;
+
+        }
+        .press{
+            line-height: 50px;
+            position: absolute;
+            left: 0px;
+            top: 170px;
+            visibility: hidden;
+            background-color: black;
+            color: aliceblue;
+        }
+        .box:hover .next{
+            visibility: visible;
+        }
+        .box:hover .press{
+            visibility: visible;
+        }
+    </style>
+    <div class="box">
+        <img src="image/chitietsanpham1.webp" id="show">
+        <div class="next">Next</div>
+        <div class="press">Press</div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var slide = new Array();
+            slide[0] = "image/chitietsanpham1.webp";
+            slide[1] = "image/chitietsanpham2.webp";
+            slide[2] = "image/chitietsanpham3.webp";
+            slide[3] = "image/chitietsanpham4.webp";
+         
+            var n=0;
+            $(".next").click(function(){
+                n++;
+                $("#show").fadeOut(function(){
+                $("#show").attr("src",slide[n]);
+                $("#show").fadeIn();
+                });
+                if(n == slide.length){
+                    n=0;
+                }  
+            });
+            $(".press").click(function(){
+                if(n==0)
+                    n = slide.length;
+                    n--;
+                    $("#show").fadeOut(function(){
+                        
+                $("#show").attr("src",slide[n]);
+                $("#show").fadeIn();
+                });
+            });
+
+            });
+    </script>
+</body>
+</html>
